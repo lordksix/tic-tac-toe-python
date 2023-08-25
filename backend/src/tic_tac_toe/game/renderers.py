@@ -14,6 +14,5 @@ class Renderer(metaclass=abc.ABCMeta):
     def render(self, game_state: GameState) -> None:
         """Render the current game state."""
 
-    @abc.abstractmethod
-    def placerholder(self, game_state: GameState) -> None:
+    def placerholder(self) -> None:
         """Render the current game state."""

@@ -4,6 +4,9 @@ import re
 from dataclasses import dataclass
 from functools import cached_property
 
+from tic_tac_toe.logic.exceptions import InvalidMove
+from tic_tac_toe.logic.validators import validate_game_state, validate_grid
+
 WINNING_PATTERNS = (
     "???......",
     "...???...",
@@ -50,8 +53,7 @@ class Grid:
     def __post_init__(self) -> None:
         """Post instantiation hook that verifies that the grid is compose of 9 elements (X, O, or
         space)"""
-        if not re.match(r"^[\sXO]{9}$", self.cells):
-            raise ValueError("Must contain 9 cells of: X, O, or space")
+        validate_grid(self)
 
     @cached_property
     def x_count(self) -> int:
@@ -98,6 +100,11 @@ class GameState:
     """
     grid: Grid
     starting_mark: Mark = Mark("X")
+
+    def __post_init__(self) -> None:
+        """Post instantiation hook that verifies that the gamestate is correct
+        """
+        validate_game_state(self)
 
     @cached_property
     def current_mark(self) -> Mark:
@@ -168,3 +175,44 @@ class GameState:
                         for match in re.finditer(r"\?", pattern)
                     ]
         return []
+
+    @cached_property
+    def possible_moves(self) -> list[Move]:
+        """Cached getter of possible moves
+
+        Returns:
+            list[Move]: list of possible moves
+        """
+        moves = []
+        if not self.game_over:
+            for match in re.finditer(r"\s", self.grid.cells):
+                moves.append(self.make_move_to(match.start()))
+        return moves
+
+    def make_move_to(self, index: int) -> Move:
+        """_summary_
+
+        Args:
+            index (int): _description_
+
+        Raises:
+            InvalidMove: Custom exception
+
+        Returns:
+            Move: Snapshot of movies
+        """
+        if self.grid.cells[index] != " ":
+            raise InvalidMove("Cell is not empty")
+        return Move(
+            mark=self.current_mark,
+            cell_index=index,
+            before_state=self,
+            after_state=GameState(
+                Grid(
+                    self.grid.cells[:index]
+                    + self.current_mark
+                    + self.grid.cells[index + 1:]
+                ),
+                self.starting_mark,
+            ),
+        )

@@ -55,5 +55,4 @@ class TicTacToe:
         """
         if game_state.current_mark is self.player1.mark:
             return self.player1
-        else:
-            return self.player2
+        return self.player2

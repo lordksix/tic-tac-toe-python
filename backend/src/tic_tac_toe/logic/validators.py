@@ -3,9 +3,11 @@
 from __future__ import annotations
 import re
 from typing import TYPE_CHECKING
+from tic_tac_toe.logic.exceptions import InvalidMove
 from tic_tac_toe.logic.exceptions import InvalidGameState
 
 if TYPE_CHECKING:
+    from tic_tac_toe.game.players import Player
     from tic_tac_toe.logic.models import GameState, Grid, Mark
 
 def validate_grid(grid: Grid) -> None:
@@ -88,3 +90,17 @@ def validate_winner(
         else:
             if grid.o_count != grid.x_count:
                 raise InvalidGameState("Wrong number of Os")
+
+def validate_players(player1: Player, player2: Player) -> None:
+    """Method that validates the correct instantiation of Players.
+    Players must use different marks
+
+    Args:
+        player1 (Player): Player consisting in a Mark
+        player2 (Player): Player consisting in a Mark
+
+    Raises:
+        ValueError: custom exception
+    """
+    if player1.mark is player2.mark:
+        raise ValueError("Players must use different marks")

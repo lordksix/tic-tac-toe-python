@@ -96,7 +96,7 @@ class Move:
 @dataclass(frozen=True)
 class GameState:
     """Inmutable data Class that is strictly a data transfer object (DTO) whose main purpose is to
-    carry data, consisting of the grid of cells and the starting player’s mark
+    carry data, consisting of the grid of cells and the starting player's mark
     """
     grid: Grid
     starting_mark: Mark = Mark("X")

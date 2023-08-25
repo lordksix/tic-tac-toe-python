@@ -1,3 +1,5 @@
+"""Module with player classes
+"""
 import abc
 import random
 import time

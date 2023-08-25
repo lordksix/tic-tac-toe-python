@@ -3,7 +3,6 @@
 from __future__ import annotations
 import re
 from typing import TYPE_CHECKING
-from tic_tac_toe.logic.exceptions import InvalidMove
 from tic_tac_toe.logic.exceptions import InvalidGameState
 
 if TYPE_CHECKING:
@@ -61,7 +60,7 @@ def validate_starting_mark(grid: Grid, starting_mark: Mark) -> None:
         if starting_mark != "X":
             raise InvalidGameState("Wrong starting mark")
     elif grid.o_count > grid.x_count and starting_mark != "O":
-          raise InvalidGameState("Wrong starting mark")
+        raise InvalidGameState("Wrong starting mark")
 
 def validate_winner(
     grid: Grid, starting_mark: Mark, winner: Mark | None

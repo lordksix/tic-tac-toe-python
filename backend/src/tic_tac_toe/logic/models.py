@@ -115,8 +115,7 @@ class GameState:
         """
         if self.grid.x_count == self.grid.o_count:
             return self.starting_mark
-        else:
-            return self.starting_mark.other
+        return self.starting_mark.other
 
     @cached_property
     def game_not_started(self) -> bool:

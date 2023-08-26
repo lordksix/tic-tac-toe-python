@@ -51,9 +51,9 @@ def minimax(
 
     Args:
         move (Move): Inmutable data Class that is strictly a data transfer object (DTO) whose
-        main purpose is to carry data. Consists of the mark identifying the player who made a
-        move, a numeric zero-based index in the string of cells, and the two states before
-        and after making a move.
+            main purpose is to carry data. Consists of the mark identifying the player who made a
+            move, a numeric zero-based index in the string of cells, and the two states before
+            and after making a move.
         maximizer (Mark): Mark for the player
         choose_highest_score (bool, optional): Defaults to False.
 

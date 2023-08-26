@@ -10,10 +10,7 @@ import abc
 from tic_tac_toe.logic.models import GameState
 
 class Renderer(metaclass=abc.ABCMeta):
-    """Abstract class for the creation of visual and state rendering.
-
-    Args:
-        metaclass (_type_, optional): Setting class as ABC. Defaults to abc.ABCMeta.
+    """Abstract class for the creation of visual and state rendering. Extends as metaclass, abc.ABCMeta.
 
     Methods:
         def render(self, game_state: GameState) -> None:

@@ -2,11 +2,10 @@
 
 This module allows the game to run. It is the game engine.
 
-Typical usage example:
-
-    player1 = RandomComputerPlayer(Mark("X"))
-    player2 = RandomComputerPlayer(Mark("O"))
-    TicTacToe(player1, player2, ConsoleRenderer()).play()
+Example:
+    >>> player1 = RandomComputerPlayer(Mark("X"))
+    >>> player2 = RandomComputerPlayer(Mark("O"))
+    >>> TicTacToe(player1, player2, ConsoleRenderer()).play()
 
 The module contains the following class:
 - `TicTacToe`
@@ -76,7 +75,7 @@ class TicTacToe:
 
         Args:
             game_state (GameState): current GameState, consisting of a current Grid (9 elemets that
-            that can be X, O or spaces) and a starting Mark (default X)
+                that can be X, O or spaces) and a starting Mark (default X).
 
         Returns:
             Player: The player that has to play current turn

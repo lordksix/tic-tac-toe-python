@@ -127,14 +127,13 @@ def validate_winner(
                 raise InvalidGameState("Wrong number of Os")
 
 def validate_players(player1: Player, player2: Player) -> None:
-    """Validates the correct instantiation of Players.
-    Players must use different marks
+    """Validates the correct instantiation of Players. Players must use different marks
 
     Args:
         player1 (Player): An instance of subclass of the Player class that
-        represents a human or computer
+            represents a human or computer
         player2 (Player): An instance of subclass of the Player class that
-        represents a human or computer
+            represents a human or computer
 
     Raises:
         ValueError: Exception that represent a invalidad game state.

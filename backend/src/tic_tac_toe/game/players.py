@@ -21,10 +21,7 @@ from tic_tac_toe.logic.minimax import find_best_move
 from tic_tac_toe.logic.models import GameState, Mark, Move
 
 class Player(metaclass=abc.ABCMeta):
-    """Abstract class for the creation of players.
-
-    Args:
-        metaclass (_type_, optional): Setting class as ABC. Defaults to abc.ABCMeta.
+    """Abstract class for the creation of players. Extends as metaclass, abc.ABCMeta.
 
     Attributes:
         mark: Mark
@@ -49,7 +46,7 @@ class Player(metaclass=abc.ABCMeta):
 
         Args:
             game_state (GameState): current GameState, consisting of a current Grid (9 elemets that
-            that can be X, O or spaces) and a starting Mark (default X).
+                that can be X, O or spaces) and a starting Mark (default X).
 
         Raises:
             InvalidMove: Exception when a invalid move is selected
@@ -68,12 +65,10 @@ class Player(metaclass=abc.ABCMeta):
         """Return the current player's move in the given game state."""
 
 class ComputerPlayer(Player, metaclass=abc.ABCMeta):
-    """Abstract class for the creation of computer players
+    """Abstract class for the creation of computer players. Extends as metaclass, abc.ABCMeta.
+    Extends Player abstract class An instance of subclass of the Player class that represents a human or
+    computer.
 
-    Args:
-        Player (_type_): An instance of subclass of the Player class that represents a human or
-        computer
-        metaclass (_type_, optional): Setting class as ABC. Defaults to abc.ABCMeta.
 
     Attributes:
         mark: Mark
@@ -89,8 +84,8 @@ class ComputerPlayer(Player, metaclass=abc.ABCMeta):
         """
         Args:
             mark (Mark): An instance class that handles user marks
-            delay_seconds (float, optional): Represents the delay time for the computer to playe.
-            Defaults to 0.25.
+            delay_seconds (float, optional): Represents the delay time for the computer
+                to player. Defaults to 0.25.
         """
         super().__init__(mark)
         self.delay_seconds = delay_seconds
@@ -100,7 +95,7 @@ class ComputerPlayer(Player, metaclass=abc.ABCMeta):
 
         Args:
             game_state (GameState): current GameState, consisting of a current Grid (9 elemets that
-            that can be X, O or spaces) and a starting Mark (default X).
+                that can be X, O or spaces) and a starting Mark (default X).
 
         Returns:
             Move | None: return a move class or none
@@ -113,10 +108,8 @@ class ComputerPlayer(Player, metaclass=abc.ABCMeta):
         """Return the computer's move in the given game state."""
 
 class RandomComputerPlayer(ComputerPlayer):
-    """Class for the creation of computer players with random moves
-
-    Args:
-        ComputerPlayer (_type_): Abstract class for the creation of computer players
+    """Class for the creation of computer players with random moves. Extends ComputerPlayer
+    abstract class.
 
     Methods:
         get_computer_move(self, game_state: GameState) -> Move | None:
@@ -127,7 +120,7 @@ class RandomComputerPlayer(ComputerPlayer):
 
         Args:
             game_state (GameState): current GameState, consisting of a current Grid (9 elemets that
-            that can be X, O or spaces) and a starting Mark (default X).
+                that can be X, O or spaces) and a starting Mark (default X).
 
         Returns:
             Move | None: return a move class or none
@@ -135,10 +128,8 @@ class RandomComputerPlayer(ComputerPlayer):
         return game_state.make_random_move()
 
 class MinimaxComputerPlayer(ComputerPlayer):
-    """Class for the creation of computer players with move based on minimax algorithm.
-
-    Args:
-        ComputerPlayer (_type_): Abstract class for the creation of computer players.
+    """A class for the creation of computer players with move based on minimax algorithm.
+    Extends ComputerPlayer, an abstract class for the creation of computer players.
 
     Methods:
         get_computer_move(self, game_state: GameState) -> Move | None:
@@ -150,7 +141,7 @@ class MinimaxComputerPlayer(ComputerPlayer):
 
         Args:
             game_state (GameState): current GameState, consisting of a current Grid (9 elemets that
-            that can be X, O or spaces) and a starting Mark (default X).
+                that can be X, O or spaces) and a starting Mark (default X).
 
         Returns:
             Move | None: return a move class or none.

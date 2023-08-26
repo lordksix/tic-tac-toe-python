@@ -29,22 +29,16 @@ WINNING_PATTERNS = (
 )
 
 class Mark(enum.StrEnum):
-    """A class that handles user marks. it can be CROSS or X, or NAUGHT or O.
-
-    Args:
-        enum (_type_): CROSS or X, or NAUGHT or O.
-
-    Attributes:
-        CROSS = "X"
-        NAUGHT = "O"
+    """A class that handles user marks. it can be CROSS or X, or NAUGHT or O. Extends enum.StrEnum
+        class. It can be CROSS or X, or NAUGHT or O.
 
     Methods:
         other(self) -> "Mark":
             Returns the opposite MARK
-        space).
+            space).
 
     Returns:
-        _type_: CROSS or X, or NAUGHT or O
+        (Mark): CROSS or X, or NAUGHT or O
     """
     CROSS = "X"
     NAUGHT = "O"
@@ -69,9 +63,6 @@ class Grid:
             Represents the grid, 9 elements X, O or space.
 
     Methods:
-        __post_init__(self) -> None
-            Post instantiation hook that verifies that the grid is compose of 9 elements (X, O, or
-        space).
         x_count(self) -> int:
             Cached getter of total of X.
         o_count(self) -> int:
@@ -149,8 +140,6 @@ class GameState:
             Represent the starting mark. Default to X
 
     Methods:
-        __post_init__(self) -> None
-            Post instantiation hook that verifies that the gamestate is correct.
         current_mark(self) -> Mark:
             Cached getter of current mark.
         game_not_started(self) -> bool:

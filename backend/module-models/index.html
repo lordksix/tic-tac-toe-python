@@ -1,0 +1,2540 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.3">
+    
+    
+      
+        <title>Models module - Tic Tac Toe Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0e669242.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#models-module" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Tic Tac Toe Docs" class="md-header__button md-logo" aria-label="Tic Tac Toe Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tic Tac Toe Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Models module
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Tic Tac Toe Docs" class="md-nav__button md-logo" aria-label="Tic Tac Toe Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Tic Tac Toe Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tic Tac Toe Docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-guides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How-To Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Explanations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models" class="md-nav__link">
+    models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.GameState" class="md-nav__link">
+    GameState
+  </a>
+  
+    <nav class="md-nav" aria-label="GameState">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.GameState.current_mark" class="md-nav__link">
+    current_mark
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.GameState.game_not_started" class="md-nav__link">
+    game_not_started
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.GameState.game_over" class="md-nav__link">
+    game_over
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.GameState.possible_moves" class="md-nav__link">
+    possible_moves
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.GameState.tie" class="md-nav__link">
+    tie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.GameState.winner" class="md-nav__link">
+    winner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.GameState.winning_cells" class="md-nav__link">
+    winning_cells
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.GameState.__post_init__" class="md-nav__link">
+    __post_init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.GameState.evaluate_score" class="md-nav__link">
+    evaluate_score()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.GameState.make_move_to" class="md-nav__link">
+    make_move_to()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.GameState.make_random_move" class="md-nav__link">
+    make_random_move()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.Grid" class="md-nav__link">
+    Grid
+  </a>
+  
+    <nav class="md-nav" aria-label="Grid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.Grid.empty_count" class="md-nav__link">
+    empty_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.Grid.o_count" class="md-nav__link">
+    o_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.Grid.x_count" class="md-nav__link">
+    x_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.Grid.__post_init__" class="md-nav__link">
+    __post_init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.Mark" class="md-nav__link">
+    Mark
+  </a>
+  
+    <nav class="md-nav" aria-label="Mark">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.Mark.other" class="md-nav__link">
+    other
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.models.Move" class="md-nav__link">
+    Move
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="models-module">Models module</h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="tic_tac_toe.logic.models"></a>
+  <div class="doc doc-contents first">
+  
+      <p>Provide the classes for domain model.</p>
+<p>This module allows the creation of intances of Marks, Grids, Move and GameState.</p>
+<p>The module contains the following class:
+- <code>Mark</code> - A class that handles user marks.
+- <code>Grid</code> - A inmutable Class that handles the grid information.
+- <code>Move</code> - A inmutable data class that handles move information.
+- <code>GameState</code> - A inmutable data class that handles game state information.</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="tic_tac_toe.logic.models.GameState" class="doc doc-heading">
+          <code>GameState</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>An inmutable data Class that is strictly a data transfer object (DTO) whose main purpose
+is to carry data, consisting of the grid of cells and the starting player's mark</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>grid</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Grid" href="#tic_tac_toe.logic.models.Grid">Grid</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Grid
+Represents the grid, 9 elements X, O or space</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>starting_mark</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Mark" href="#tic_tac_toe.logic.models.Mark">Mark</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Mark = Mark("X")
+Represent the starting mark. Default to X</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Methods:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><code>current_mark</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Cached getter of current mark.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><code>game_not_started</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Cached getter if current state is the initial state.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><code>game_over</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Cached getter to check if the game is ofver by check if there is a winner or
+there is a tie.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><code>tie</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Cached getter to check if there is a tie by checking if
+there is a winner or grid is empty.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><code>winner</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Cached getter that check if there is a winner by checking winning patterns.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><code>possible_moves</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Cached getter of possible moves.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><code>make_random_move</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Return possible move based on possible moves.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><code>make_move_to</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>int) -&gt; Move:
+Return the move to make based on index.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><code>evaluate_score</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Mark) -&gt; int:
+Returns score based on the result of the move.</p>
+              </div>
+            </td>
+          </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>backend\src\tic_tac_toe\logic\models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">GameState</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;An inmutable data Class that is strictly a data transfer object (DTO) whose main purpose</span>
+<span class="sd">    is to carry data, consisting of the grid of cells and the starting player&#39;s mark</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        grid: Grid</span>
+<span class="sd">            Represents the grid, 9 elements X, O or space</span>
+<span class="sd">        starting_mark: Mark = Mark(&quot;X&quot;)</span>
+<span class="sd">            Represent the starting mark. Default to X</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        current_mark(self) -&gt; Mark:</span>
+<span class="sd">            Cached getter of current mark.</span>
+<span class="sd">        game_not_started(self) -&gt; bool:</span>
+<span class="sd">            Cached getter if current state is the initial state.</span>
+<span class="sd">        game_over(self) -&gt; bool:</span>
+<span class="sd">            Cached getter to check if the game is ofver by check if there is a winner or</span>
+<span class="sd">            there is a tie.</span>
+<span class="sd">        tie(self) -&gt; bool:</span>
+<span class="sd">            Cached getter to check if there is a tie by checking if</span>
+<span class="sd">            there is a winner or grid is empty.</span>
+<span class="sd">        winner(self) -&gt; Mark | None:</span>
+<span class="sd">            Cached getter that check if there is a winner by checking winning patterns.</span>
+<span class="sd">        possible_moves(self) -&gt; list[Move]:</span>
+<span class="sd">            Cached getter of possible moves.</span>
+<span class="sd">        make_random_move(self) -&gt; Move | None:</span>
+<span class="sd">            Return possible move based on possible moves.</span>
+<span class="sd">        make_move_to(self, index: int) -&gt; Move:</span>
+<span class="sd">            Return the move to make based on index.</span>
+<span class="sd">        evaluate_score(self, mark: Mark) -&gt; int:</span>
+<span class="sd">            Returns score based on the result of the move.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">grid</span><span class="p">:</span> <span class="n">Grid</span>
+    <span class="n">starting_mark</span><span class="p">:</span> <span class="n">Mark</span> <span class="o">=</span> <span class="n">Mark</span><span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Post instantiation hook that verifies that the gamestate is correct</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">validate_game_state</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="nd">@cached_property</span>
+    <span class="k">def</span> <span class="nf">current_mark</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mark</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Cached getter of current mark.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Mark: Mark of current state.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">x_count</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">o_count</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">starting_mark</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">starting_mark</span><span class="o">.</span><span class="n">other</span>
+
+    <span class="nd">@cached_property</span>
+    <span class="k">def</span> <span class="nf">game_not_started</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Cached getter if current state is the initial state.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: Rather current turn is the first turn or not</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">empty_count</span> <span class="o">==</span> <span class="mi">9</span>
+
+    <span class="nd">@cached_property</span>
+    <span class="k">def</span> <span class="nf">game_over</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Cached getter to check if the game is ofver by check if there is a winner or</span>
+<span class="sd">        there is a tie.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: Rather the game is over or not.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">winner</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">tie</span>
+
+    <span class="nd">@cached_property</span>
+    <span class="k">def</span> <span class="nf">tie</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Cached getter to check if there is a tie by checking if</span>
+<span class="sd">        there is a winner or grid is empty.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: Rather the game has a winner or grid is empty</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">winner</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">empty_count</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="nd">@cached_property</span>
+    <span class="k">def</span> <span class="nf">winner</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mark</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Cached getter that check if there is a winner by checking winning patterns.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Mark | None: Could be X, O or None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">WINNING_PATTERNS</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">mark</span> <span class="ow">in</span> <span class="n">Mark</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">mark</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">cells</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="n">mark</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@cached_property</span>
+    <span class="k">def</span> <span class="nf">winning_cells</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Chaced getter with information of position of marks in winning cell</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list[int]: List of positions of marks in winning cell</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">WINNING_PATTERNS</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">mark</span> <span class="ow">in</span> <span class="n">Mark</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">mark</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">cells</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="p">[</span>
+                        <span class="k">match</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+                        <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\?&quot;</span><span class="p">,</span> <span class="n">pattern</span><span class="p">)</span>
+                    <span class="p">]</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="nd">@cached_property</span>
+    <span class="k">def</span> <span class="nf">possible_moves</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Move</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Cached getter of possible moves.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list[Move]: list of possible moves</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">moves</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\s&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">cells</span><span class="p">):</span>
+                <span class="n">moves</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">make_move_to</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">start</span><span class="p">()))</span>
+        <span class="k">return</span> <span class="n">moves</span>
+
+    <span class="k">def</span> <span class="nf">make_random_move</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Move</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return possible move based on possible moves.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Move | None: Snapshot of moves.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">possible_moves</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">make_move_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Move</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the move to make based on index.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            index (int): Position of the move.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            InvalidMove: Exception when a invalid move is selected</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Move: Snapshot of moves</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">cells</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot; &quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">InvalidMove</span><span class="p">(</span><span class="s2">&quot;Cell is not empty&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Move</span><span class="p">(</span>
+            <span class="n">mark</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">current_mark</span><span class="p">,</span>
+            <span class="n">cell_index</span><span class="o">=</span><span class="n">index</span><span class="p">,</span>
+            <span class="n">before_state</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+            <span class="n">after_state</span><span class="o">=</span><span class="n">GameState</span><span class="p">(</span>
+                <span class="n">Grid</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">cells</span><span class="p">[:</span><span class="n">index</span><span class="p">]</span>
+                    <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_mark</span>
+                    <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">cells</span><span class="p">[</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span>
+                <span class="p">),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">starting_mark</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">evaluate_score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mark</span><span class="p">:</span> <span class="n">Mark</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns score based on the result of the move.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            mark (Mark): Class that handles user marks.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            UnknownGameScore: Exception when no score can be calculated.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            int: score for the game.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tie</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mi">0</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">winner</span> <span class="ow">is</span> <span class="n">mark</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">raise</span> <span class="n">UnknownGameScore</span><span class="p">(</span><span class="s2">&quot;Game is not over yet&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.GameState.current_mark" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">current_mark</span><span class="p">:</span> <span class="n">Mark</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Cached getter of current mark.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Mark</code></td>          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Mark" href="#tic_tac_toe.logic.models.Mark">Mark</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Mark of current state.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.GameState.game_not_started" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">game_not_started</span><span class="p">:</span> <span class="nb">bool</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Cached getter if current state is the initial state.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>bool</code></td>          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Rather current turn is the first turn or not</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.GameState.game_over" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">game_over</span><span class="p">:</span> <span class="nb">bool</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Cached getter to check if the game is ofver by check if there is a winner or
+there is a tie.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>bool</code></td>          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Rather the game is over or not.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.GameState.possible_moves" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">possible_moves</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Move</span><span class="p">]</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Cached getter of possible moves.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>list[<a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Move" href="#tic_tac_toe.logic.models.Move">Move</a>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>list[Move]: list of possible moves</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.GameState.tie" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">tie</span><span class="p">:</span> <span class="nb">bool</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Cached getter to check if there is a tie by checking if
+there is a winner or grid is empty.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>bool</code></td>          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Rather the game has a winner or grid is empty</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.GameState.winner" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">winner</span><span class="p">:</span> <span class="n">Mark</span> <span class="o">|</span> <span class="kc">None</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Cached getter that check if there is a winner by checking winning patterns.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Mark" href="#tic_tac_toe.logic.models.Mark">Mark</a> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Mark | None: Could be X, O or None.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.GameState.winning_cells" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">winning_cells</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Chaced getter with information of position of marks in winning cell</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>list[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>list[int]: List of positions of marks in winning cell</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.GameState.__post_init__" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__post_init__</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Post instantiation hook that verifies that the gamestate is correct</p>
+
+          <details class="quote">
+            <summary>Source code in <code>backend\src\tic_tac_toe\logic\models.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Post instantiation hook that verifies that the gamestate is correct</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">validate_game_state</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.GameState.evaluate_score" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">evaluate_score</span><span class="p">(</span><span class="n">mark</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Returns score based on the result of the move.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>mark</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Mark" href="#tic_tac_toe.logic.models.Mark">Mark</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Class that handles user marks.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.exceptions.UnknownGameScore" href="../module-exceptions/#tic_tac_toe.logic.exceptions.UnknownGameScore">UnknownGameScore</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Exception when no score can be calculated.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>int</code></td>          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>score for the game.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>backend\src\tic_tac_toe\logic\models.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">evaluate_score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mark</span><span class="p">:</span> <span class="n">Mark</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns score based on the result of the move.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        mark (Mark): Class that handles user marks.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        UnknownGameScore: Exception when no score can be calculated.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: score for the game.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tie</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">winner</span> <span class="ow">is</span> <span class="n">mark</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">raise</span> <span class="n">UnknownGameScore</span><span class="p">(</span><span class="s2">&quot;Game is not over yet&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.GameState.make_move_to" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">make_move_to</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return the move to make based on index.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>index</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Position of the move.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.exceptions.InvalidMove" href="../module-exceptions/#tic_tac_toe.logic.exceptions.InvalidMove">InvalidMove</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Exception when a invalid move is selected</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Move</code></td>          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Move" href="#tic_tac_toe.logic.models.Move">Move</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Snapshot of moves</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>backend\src\tic_tac_toe\logic\models.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">make_move_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Move</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the move to make based on index.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        index (int): Position of the move.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        InvalidMove: Exception when a invalid move is selected</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Move: Snapshot of moves</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">cells</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot; &quot;</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">InvalidMove</span><span class="p">(</span><span class="s2">&quot;Cell is not empty&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Move</span><span class="p">(</span>
+        <span class="n">mark</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">current_mark</span><span class="p">,</span>
+        <span class="n">cell_index</span><span class="o">=</span><span class="n">index</span><span class="p">,</span>
+        <span class="n">before_state</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+        <span class="n">after_state</span><span class="o">=</span><span class="n">GameState</span><span class="p">(</span>
+            <span class="n">Grid</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">cells</span><span class="p">[:</span><span class="n">index</span><span class="p">]</span>
+                <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_mark</span>
+                <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">cells</span><span class="p">[</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span>
+            <span class="p">),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">starting_mark</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.GameState.make_random_move" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">make_random_move</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return possible move based on possible moves.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Move" href="#tic_tac_toe.logic.models.Move">Move</a> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Move | None: Snapshot of moves.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>backend\src\tic_tac_toe\logic\models.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">make_random_move</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Move</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return possible move based on possible moves.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Move | None: Snapshot of moves.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">possible_moves</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="tic_tac_toe.logic.models.Grid" class="doc doc-heading">
+          <code>Grid</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>An inmutable Class that handles the grid. It is instantiate as a empty grid 9 spaces as
+default. It runs as Post instantiation hook that verifies that grid composition. Allowed
+cell position: 9 elements (X, O, or space).</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>cells</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>str
+Represents the grid, 9 elements X, O or space.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Methods:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><code>x_count</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Cached getter of total of X.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><code>o_count</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Cached getter of total of O</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><code>empty_count</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Cached getter of total of spaces</p>
+              </div>
+            </td>
+          </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>ValueError</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Raises ValueError if</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>backend\src\tic_tac_toe\logic\models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Grid</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;An inmutable Class that handles the grid. It is instantiate as a empty grid 9 spaces as</span>
+<span class="sd">    default. It runs as Post instantiation hook that verifies that grid composition. Allowed</span>
+<span class="sd">    cell position: 9 elements (X, O, or space).</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        cells: str</span>
+<span class="sd">            Represents the grid, 9 elements X, O or space.</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        x_count(self) -&gt; int:</span>
+<span class="sd">            Cached getter of total of X.</span>
+<span class="sd">        o_count(self) -&gt; int:</span>
+<span class="sd">            Cached getter of total of O</span>
+<span class="sd">        empty_count(self) -&gt; int:</span>
+<span class="sd">            Cached getter of total of spaces</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: Raises ValueError if</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cells</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="mi">9</span>
+
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Post instantiation hook that verifies that the grid is compose of 9 elements (X, O, or</span>
+<span class="sd">        space)&quot;&quot;&quot;</span>
+        <span class="n">validate_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="nd">@cached_property</span>
+    <span class="k">def</span> <span class="nf">x_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Cached getter of total of X</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            int: Total of X</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cells</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="p">)</span>
+
+    <span class="nd">@cached_property</span>
+    <span class="k">def</span> <span class="nf">o_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Cached getter of total of O</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            int: Total of Y</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cells</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;O&quot;</span><span class="p">)</span>
+
+    <span class="nd">@cached_property</span>
+    <span class="k">def</span> <span class="nf">empty_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Cached getter of total of spaces</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            int: Total of spaces</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cells</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.Grid.empty_count" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">empty_count</span><span class="p">:</span> <span class="nb">int</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Cached getter of total of spaces</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>int</code></td>          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Total of spaces</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.Grid.o_count" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">o_count</span><span class="p">:</span> <span class="nb">int</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Cached getter of total of O</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>int</code></td>          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Total of Y</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.Grid.x_count" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">x_count</span><span class="p">:</span> <span class="nb">int</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Cached getter of total of X</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>int</code></td>          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Total of X</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.Grid.__post_init__" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__post_init__</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Post instantiation hook that verifies that the grid is compose of 9 elements (X, O, or
+space)</p>
+
+          <details class="quote">
+            <summary>Source code in <code>backend\src\tic_tac_toe\logic\models.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Post instantiation hook that verifies that the grid is compose of 9 elements (X, O, or</span>
+<span class="sd">    space)&quot;&quot;&quot;</span>
+    <span class="n">validate_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="tic_tac_toe.logic.models.Mark" class="doc doc-heading">
+          <code>Mark</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="enum.StrEnum">StrEnum</span></code></p>
+
+  
+      <p>A class that handles user marks. it can be CROSS or X, or NAUGHT or O. Extends enum.StrEnum
+    class. It can be CROSS or X, or NAUGHT or O.</p>
+
+
+
+  <p><strong>Methods:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><code>other</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Returns the opposite MARK
+space).</p>
+              </div>
+            </td>
+          </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Mark" href="#tic_tac_toe.logic.models.Mark">Mark</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>CROSS or X, or NAUGHT or O</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>backend\src\tic_tac_toe\logic\models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Mark</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">StrEnum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A class that handles user marks. it can be CROSS or X, or NAUGHT or O. Extends enum.StrEnum</span>
+<span class="sd">        class. It can be CROSS or X, or NAUGHT or O.</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        other(self) -&gt; &quot;Mark&quot;:</span>
+<span class="sd">            Returns the opposite MARK</span>
+<span class="sd">            space).</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (Mark): CROSS or X, or NAUGHT or O</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">CROSS</span> <span class="o">=</span> <span class="s2">&quot;X&quot;</span>
+    <span class="n">NAUGHT</span> <span class="o">=</span> <span class="s2">&quot;O&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">other</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Mark&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the opposite MARK.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Mark: can be X or O.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Mark</span><span class="o">.</span><span class="n">CROSS</span> <span class="k">if</span> <span class="bp">self</span> <span class="ow">is</span> <span class="n">Mark</span><span class="o">.</span><span class="n">NAUGHT</span> <span class="k">else</span> <span class="n">Mark</span><span class="o">.</span><span class="n">NAUGHT</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+
+<h3 id="tic_tac_toe.logic.models.Mark.other" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">other</span><span class="p">:</span> <span class="n">Mark</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Returns the opposite MARK.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Mark</code></td>          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Mark" href="#tic_tac_toe.logic.models.Mark">Mark</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>can be X or O.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="tic_tac_toe.logic.models.Move" class="doc doc-heading">
+          <code>Move</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>An inmutable data class that is strictly a data transfer object (DTO) whose main purpose
+is to carry data. Consists of the mark identifying the player who made a move, a numeric
+zero-based index in the string of cells, and the two states before and after making a move.</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>mark</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Mark" href="#tic_tac_toe.logic.models.Mark">Mark</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Mark
+Represent the mark of the player.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>cell_index</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>int
+Represent the position to play.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>before_state</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.GameState" href="#tic_tac_toe.logic.models.GameState">GameState</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>"GameState"
+Represent the game state before the move.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>after_state</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.GameState" href="#tic_tac_toe.logic.models.GameState">GameState</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>"GameState"
+Represent the game state after the move.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>backend\src\tic_tac_toe\logic\models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Move</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;An inmutable data class that is strictly a data transfer object (DTO) whose main purpose</span>
+<span class="sd">    is to carry data. Consists of the mark identifying the player who made a move, a numeric</span>
+<span class="sd">    zero-based index in the string of cells, and the two states before and after making a move.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        mark: Mark</span>
+<span class="sd">            Represent the mark of the player.</span>
+<span class="sd">        cell_index: int</span>
+<span class="sd">            Represent the position to play.</span>
+<span class="sd">        before_state: &quot;GameState&quot;</span>
+<span class="sd">            Represent the game state before the move.</span>
+<span class="sd">        after_state: &quot;GameState&quot;</span>
+<span class="sd">            Represent the game state after the move.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mark</span><span class="p">:</span> <span class="n">Mark</span>
+    <span class="n">cell_index</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">before_state</span><span class="p">:</span> <span class="s2">&quot;GameState&quot;</span>
+    <span class="n">after_state</span><span class="p">:</span> <span class="s2">&quot;GameState&quot;</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.78eede0e.min.js"></script>
+      
+    
+  </body>
+</html>

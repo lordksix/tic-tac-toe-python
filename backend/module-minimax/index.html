@@ -1,0 +1,666 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.3">
+    
+    
+      
+        <title>Minimax module - Tic Tac Toe Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0e669242.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#minimax-module" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Tic Tac Toe Docs" class="md-header__button md-logo" aria-label="Tic Tac Toe Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tic Tac Toe Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Minimax module
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Tic Tac Toe Docs" class="md-nav__button md-logo" aria-label="Tic Tac Toe Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Tic Tac Toe Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tic Tac Toe Docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-guides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How-To Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Explanations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.minimax" class="md-nav__link">
+    minimax
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.minimax.find_best_move" class="md-nav__link">
+    find_best_move()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tic_tac_toe.logic.minimax.minimax" class="md-nav__link">
+    minimax()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="minimax-module">Minimax module</h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="tic_tac_toe.logic.minimax"></a>
+  <div class="doc doc-contents first">
+  
+      <p>Provide functions with basic AI for computer moves.</p>
+<p>This module allows more complexity to the computer moves using different
+kind of algorithms.</p>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">tic_tac_toe.logic.minimax</span> <span class="kn">import</span> <span class="n">minimax</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">tic_tac_toe.logic.models</span> <span class="kn">import</span> <span class="n">GameState</span><span class="p">,</span> <span class="n">Grid</span><span class="p">,</span> <span class="n">Mark</span>
+</code></pre></div>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">preview</span><span class="p">(</span><span class="n">cells</span><span class="p">):</span>
+<span class="go">        print(cells[:3], cells[3:6], cells[6:], sep=&quot;</span>
+</code></pre></div>
+      <p>")</p>
+<pre><code>&gt;&gt;&gt; game_state = GameState(Grid("XXO O X O"), starting_mark=Mark("X"))
+&gt;&gt;&gt; for move in game_state.possible_moves:
+        print("Score:", minimax(move, maximizer=Mark("X")))
+        preview(move.after_state.grid.cells)
+        print("-" * 10)
+</code></pre>
+<p>The module contains the following functions:
+- <code>find_best_move(game_state: GameState)</code> - Return the best move available.
+- <code>minimax(
+    move: Move, maximizer: Mark, choose_highest_score: bool = False
+    )</code> - Return 1, 0 or -1 base in the result of the next move.</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="tic_tac_toe.logic.minimax.find_best_move" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">find_best_move</span><span class="p">(</span><span class="n">game_state</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return the best move available.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>game_state</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.GameState" href="../module-models/#tic_tac_toe.logic.models.GameState">GameState</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>current GameState, consisting of a current Grid (9 elemets that
+that can be X, O or spaces) and a starting Mark (default X)</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Move" href="../module-models/#tic_tac_toe.logic.models.Move">Move</a> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Move | None: Inmutable data Class that is strictly a data transfer object (DTO) whose main</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <p>purpose is to carry data. Consists of the mark identifying the player who made a move, a numeric
+zero-based index in the string of cells, and the two states before and after making a move.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>backend\src\tic_tac_toe\logic\minimax.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">find_best_move</span><span class="p">(</span><span class="n">game_state</span><span class="p">:</span> <span class="n">GameState</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Move</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the best move available.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        game_state (GameState): current GameState, consisting of a current Grid (9 elemets that</span>
+<span class="sd">            that can be X, O or spaces) and a starting Mark (default X)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Move | None: Inmutable data Class that is strictly a data transfer object (DTO) whose main</span>
+<span class="sd">    purpose is to carry data. Consists of the mark identifying the player who made a move, a numeric</span>
+<span class="sd">    zero-based index in the string of cells, and the two states before and after making a move.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">maximizer</span><span class="p">:</span> <span class="n">Mark</span> <span class="o">=</span> <span class="n">game_state</span><span class="o">.</span><span class="n">current_mark</span>
+    <span class="n">bound_minimax</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">minimax</span><span class="p">,</span> <span class="n">maximizer</span><span class="o">=</span><span class="n">maximizer</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">game_state</span><span class="o">.</span><span class="n">possible_moves</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">bound_minimax</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="tic_tac_toe.logic.minimax.minimax" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">minimax</span><span class="p">(</span><span class="n">move</span><span class="p">,</span> <span class="n">maximizer</span><span class="p">,</span> <span class="n">choose_highest_score</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return 1, 0 or -1 base in the result of the next move.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>move</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Move" href="../module-models/#tic_tac_toe.logic.models.Move">Move</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Inmutable data Class that is strictly a data transfer object (DTO) whose
+main purpose is to carry data. Consists of the mark identifying the player who made a
+move, a numeric zero-based index in the string of cells, and the two states before
+and after making a move.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>maximizer</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Mark" href="../module-models/#tic_tac_toe.logic.models.Mark">Mark</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Mark for the player</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>choose_highest_score</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Defaults to False.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>int</code></td>          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>returns 1, 0 or -1</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>backend\src\tic_tac_toe\logic\minimax.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">minimax</span><span class="p">(</span>
+    <span class="n">move</span><span class="p">:</span> <span class="n">Move</span><span class="p">,</span> <span class="n">maximizer</span><span class="p">:</span> <span class="n">Mark</span><span class="p">,</span> <span class="n">choose_highest_score</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return 1, 0 or -1 base in the result of the next move.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        move (Move): Inmutable data Class that is strictly a data transfer object (DTO) whose</span>
+<span class="sd">            main purpose is to carry data. Consists of the mark identifying the player who made a</span>
+<span class="sd">            move, a numeric zero-based index in the string of cells, and the two states before</span>
+<span class="sd">            and after making a move.</span>
+<span class="sd">        maximizer (Mark): Mark for the player</span>
+<span class="sd">        choose_highest_score (bool, optional): Defaults to False.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: returns 1, 0 or -1</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">move</span><span class="o">.</span><span class="n">after_state</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">move</span><span class="o">.</span><span class="n">after_state</span><span class="o">.</span><span class="n">evaluate_score</span><span class="p">(</span><span class="n">maximizer</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">max</span> <span class="k">if</span> <span class="n">choose_highest_score</span> <span class="k">else</span> <span class="nb">min</span><span class="p">)(</span>
+        <span class="n">minimax</span><span class="p">(</span><span class="n">next_move</span><span class="p">,</span> <span class="n">maximizer</span><span class="p">,</span> <span class="ow">not</span> <span class="n">choose_highest_score</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">next_move</span> <span class="ow">in</span> <span class="n">move</span><span class="o">.</span><span class="n">after_state</span><span class="o">.</span><span class="n">possible_moves</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.78eede0e.min.js"></script>
+      
+    
+  </body>
+</html>

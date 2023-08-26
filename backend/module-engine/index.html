@@ -1,0 +1,899 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.3">
+    
+    
+      
+        <title>Engine module - Tic Tac Toe Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0e669242.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#engine-module" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Tic Tac Toe Docs" class="md-header__button md-logo" aria-label="Tic Tac Toe Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tic Tac Toe Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Engine module
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Tic Tac Toe Docs" class="md-nav__button md-logo" aria-label="Tic Tac Toe Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Tic Tac Toe Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tic Tac Toe Docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-guides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How-To Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Explanations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tic_tac_toe.game.engine" class="md-nav__link">
+    engine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tic_tac_toe.game.engine.TicTacToe" class="md-nav__link">
+    TicTacToe
+  </a>
+  
+    <nav class="md-nav" aria-label="TicTacToe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.game.engine.TicTacToe.__post_init__" class="md-nav__link">
+    __post_init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.game.engine.TicTacToe.get_current_player" class="md-nav__link">
+    get_current_player()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tic_tac_toe.game.engine.TicTacToe.play" class="md-nav__link">
+    play()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="engine-module">Engine module</h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="tic_tac_toe.game.engine"></a>
+  <div class="doc doc-contents first">
+  
+      <p>Provide the class that handles the game.</p>
+<p>This module allows the game to run. It is the game engine.</p>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>player1 = RandomComputerPlayer(Mark("X"))
+player2 = RandomComputerPlayer(Mark("O"))
+TicTacToe(player1, player2, ConsoleRenderer()).play()</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>      <p>The module contains the following class:
+- <code>TicTacToe</code></p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="tic_tac_toe.game.engine.TicTacToe" class="doc doc-heading">
+          <code>TicTacToe</code>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>A class used to represebt the game engine.</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>player1</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.game.players.Player" href="../module-players/#tic_tac_toe.game.players.Player">Player</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Player
+An instance of subclass of the Player class that represents a human or computer.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>player2</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.game.players.Player" href="../module-players/#tic_tac_toe.game.players.Player">Player</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Player
+An instance of subclass of the Player class that represents a human or computer.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>renderer</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.game.renderers.Renderer" href="../module-renderers/#tic_tac_toe.game.renderers.Renderer">Renderer</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Renderer
+An instance of subclass of the Renderer class that handles UI rendering.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>error_handler</code></td>
+          <td>
+                <code><span title="tic_tac_toe.game.engine.ErrorHandler">ErrorHandler</span> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>ErrorHandler | None = None
+A placehholder for a callback function that handles InvalidMove exceptions.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Methods:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><code>play</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Mark = Mark("X")) -&gt; None:
+Handles the flow of the game. The engine itself</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><code>def get_current_player</code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>GameState) -&gt; Player:
+Determines current player base on the current game state</p>
+              </div>
+            </td>
+          </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>backend\src\tic_tac_toe\game\engine.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">TicTacToe</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A class used to represebt the game engine.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        player1: Player</span>
+<span class="sd">            An instance of subclass of the Player class that represents a human or computer.</span>
+<span class="sd">        player2: Player</span>
+<span class="sd">            An instance of subclass of the Player class that represents a human or computer.</span>
+<span class="sd">        renderer: Renderer</span>
+<span class="sd">            An instance of subclass of the Renderer class that handles UI rendering.</span>
+<span class="sd">        error_handler: ErrorHandler | None = None</span>
+<span class="sd">            A placehholder for a callback function that handles InvalidMove exceptions.</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        play(self, starting_mark: Mark = Mark(&quot;X&quot;)) -&gt; None:</span>
+<span class="sd">            Handles the flow of the game. The engine itself</span>
+<span class="sd">        def get_current_player(self, game_state: GameState) -&gt; Player:</span>
+<span class="sd">            Determines current player base on the current game state</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">player1</span><span class="p">:</span> <span class="n">Player</span>
+    <span class="n">player2</span><span class="p">:</span> <span class="n">Player</span>
+    <span class="n">renderer</span><span class="p">:</span> <span class="n">Renderer</span>
+    <span class="n">error_handler</span><span class="p">:</span> <span class="n">ErrorHandler</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Post instantiation hook that verifies that the player instantiation was corrected</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">validate_players</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">player1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">player2</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">starting_mark</span><span class="p">:</span> <span class="n">Mark</span> <span class="o">=</span> <span class="n">Mark</span><span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Starts and handles the game until the game is over</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            starting_mark (Mark, optional): Initial Mark. Defaults to Mark(&quot;X&quot;).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">game_state</span> <span class="o">=</span> <span class="n">GameState</span><span class="p">(</span><span class="n">Grid</span><span class="p">(),</span> <span class="n">starting_mark</span><span class="p">)</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">renderer</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">game_state</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">game_state</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">player</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_current_player</span><span class="p">(</span><span class="n">game_state</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">game_state</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">make_move</span><span class="p">(</span><span class="n">game_state</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">InvalidMove</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_handler</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">error_handler</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_current_player</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">game_state</span><span class="p">:</span> <span class="n">GameState</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Player</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Determines current player base on the current game state</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            game_state (GameState): current GameState, consisting of a current Grid (9 elemets that</span>
+<span class="sd">                that can be X, O or spaces) and a starting Mark (default X).</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Player: The player that has to play current turn</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">game_state</span><span class="o">.</span><span class="n">current_mark</span> <span class="ow">is</span> <span class="bp">self</span><span class="o">.</span><span class="n">player1</span><span class="o">.</span><span class="n">mark</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">player1</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">player2</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="tic_tac_toe.game.engine.TicTacToe.__post_init__" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">__post_init__</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Post instantiation hook that verifies that the player instantiation was corrected</p>
+
+          <details class="quote">
+            <summary>Source code in <code>backend\src\tic_tac_toe\game\engine.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Post instantiation hook that verifies that the player instantiation was corrected</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">validate_players</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">player1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">player2</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="tic_tac_toe.game.engine.TicTacToe.get_current_player" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_current_player</span><span class="p">(</span><span class="n">game_state</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Determines current player base on the current game state</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>game_state</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.GameState" href="../module-models/#tic_tac_toe.logic.models.GameState">GameState</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>current GameState, consisting of a current Grid (9 elemets that
+that can be X, O or spaces) and a starting Mark (default X).</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Player</code></td>          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.game.players.Player" href="../module-players/#tic_tac_toe.game.players.Player">Player</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The player that has to play current turn</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>backend\src\tic_tac_toe\game\engine.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_current_player</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">game_state</span><span class="p">:</span> <span class="n">GameState</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Player</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Determines current player base on the current game state</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        game_state (GameState): current GameState, consisting of a current Grid (9 elemets that</span>
+<span class="sd">            that can be X, O or spaces) and a starting Mark (default X).</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Player: The player that has to play current turn</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">game_state</span><span class="o">.</span><span class="n">current_mark</span> <span class="ow">is</span> <span class="bp">self</span><span class="o">.</span><span class="n">player1</span><span class="o">.</span><span class="n">mark</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">player1</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">player2</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="tic_tac_toe.game.engine.TicTacToe.play" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">play</span><span class="p">(</span><span class="n">starting_mark</span><span class="o">=</span><span class="n">Mark</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">))</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Starts and handles the game until the game is over</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>starting_mark</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Mark" href="../module-models/#tic_tac_toe.logic.models.Mark">Mark</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Initial Mark. Defaults to Mark("X").</p>
+            </div>
+          </td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tic_tac_toe.logic.models.Mark" href="../module-models/#tic_tac_toe.logic.models.Mark">Mark</a>(&#39;X&#39;)</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>backend\src\tic_tac_toe\game\engine.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">starting_mark</span><span class="p">:</span> <span class="n">Mark</span> <span class="o">=</span> <span class="n">Mark</span><span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Starts and handles the game until the game is over</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        starting_mark (Mark, optional): Initial Mark. Defaults to Mark(&quot;X&quot;).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">game_state</span> <span class="o">=</span> <span class="n">GameState</span><span class="p">(</span><span class="n">Grid</span><span class="p">(),</span> <span class="n">starting_mark</span><span class="p">)</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">renderer</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">game_state</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">game_state</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">player</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_current_player</span><span class="p">(</span><span class="n">game_state</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">game_state</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">make_move</span><span class="p">(</span><span class="n">game_state</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">InvalidMove</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">error_handler</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">error_handler</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.78eede0e.min.js"></script>
+      
+    
+  </body>
+</html>

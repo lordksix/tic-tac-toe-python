@@ -4,7 +4,7 @@ import re
 from dataclasses import dataclass
 from functools import cached_property
 
-from tic_tac_toe.logic.exceptions import InvalidMove
+from tic_tac_toe.logic.exceptions import InvalidMove, UnknownGameScore
 from tic_tac_toe.logic.validators import validate_game_state, validate_grid
 
 WINNING_PATTERNS = (
@@ -215,3 +215,23 @@ class GameState:
                 self.starting_mark,
             ),
         )
+
+    def evaluate_score(self, mark: Mark) -> int:
+        """_summary_
+
+        Args:
+            mark (Mark): Class that handles user marks
+
+        Raises:
+            UnknownGameScore: custom exception
+
+        Returns:
+            int: score for the game
+        """
+        if self.game_over:
+            if self.tie:
+                return 0
+            if self.winner is mark:
+                return 1
+            return -1
+        raise UnknownGameScore("Game is not over yet")

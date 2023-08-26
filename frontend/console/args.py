@@ -15,6 +15,11 @@ PLAYER_CLASSES = {
 }
 
 class Args(NamedTuple):
+    """Class that handle arguments for CLI
+
+    Args:
+        NamedTuple (_type_): Player1, Player2, starting_mark
+    """
     player1: Player
     player2: Player
     starting_mark: Mark

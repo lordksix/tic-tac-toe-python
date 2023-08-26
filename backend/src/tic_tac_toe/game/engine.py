@@ -25,19 +25,17 @@ ErrorHandler: TypeAlias = Callable[[Exception], None]
 
 @dataclass(frozen=True)
 class TicTacToe:
-    """A class used to represebt the game engine
-
-    ...
+    """A class used to represebt the game engine.
 
     Attributes:
         player1: Player
-            An instance of subclass of the Player class that represents a human or computer
+            An instance of subclass of the Player class that represents a human or computer.
         player2: Player
-            An instance of subclass of the Player class that represents a human or computer
+            An instance of subclass of the Player class that represents a human or computer.
         renderer: Renderer
-            An instance of subclass of the Renderer class that handles UI rendering
+            An instance of subclass of the Renderer class that handles UI rendering.
         error_handler: ErrorHandler | None = None
-            A placehholder for a callback function that handles InvalidMove exceptions
+            A placehholder for a callback function that handles InvalidMove exceptions.
 
     Methods:
         play(self, starting_mark: Mark = Mark("X")) -> None:

@@ -31,7 +31,8 @@ The module contains the following functions:
 - `validate_winner(
     grid: Grid, starting_mark: Mark, winner: Mark | None
     ) ` - Validate winner by verifying total of Xs and Os.
-- `validate_players(player1: Player, player2: Player)` - Validate the correct instantiation of Players.
+- `validate_players(player1: Player, player2: Player)` - Validate the correct instantiation of
+    Players.
 """
 
 from __future__ import annotations

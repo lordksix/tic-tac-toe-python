@@ -32,7 +32,16 @@ class Mark(enum.StrEnum):
     """A class that handles user marks. it can be CROSS or X, or NAUGHT or O.
 
     Args:
-        enum (_type_): CROSS or X, or NAUGHT or O
+        enum (_type_): CROSS or X, or NAUGHT or O.
+
+    Attributes:
+        CROSS = "X"
+        NAUGHT = "O"
+
+    Methods:
+        other(self) -> "Mark":
+            Returns the opposite MARK
+        space).
 
     Returns:
         _type_: CROSS or X, or NAUGHT or O
@@ -42,10 +51,10 @@ class Mark(enum.StrEnum):
 
     @property
     def other(self) -> "Mark":
-        """Method that returns the opposite MARK
+        """Returns the opposite MARK.
 
         Returns:
-            Mark: can be X or O
+            Mark: can be X or O.
         """
         return Mark.CROSS if self is Mark.NAUGHT else Mark.NAUGHT
 
@@ -53,7 +62,22 @@ class Mark(enum.StrEnum):
 class Grid:
     """An inmutable Class that handles the grid. It is instantiate as a empty grid 9 spaces as
     default. It runs as Post instantiation hook that verifies that grid composition. Allowed
-    cell position: 9 elements (X, O, or space)
+    cell position: 9 elements (X, O, or space).
+
+    Attributes:
+        cells: str
+            Represents the grid, 9 elements X, O or space.
+
+    Methods:
+        __post_init__(self) -> None
+            Post instantiation hook that verifies that the grid is compose of 9 elements (X, O, or
+        space).
+        x_count(self) -> int:
+            Cached getter of total of X.
+        o_count(self) -> int:
+            Cached getter of total of O
+        empty_count(self) -> int:
+            Cached getter of total of spaces
 
     Raises:
         ValueError: Raises ValueError if
@@ -97,6 +121,16 @@ class Move:
     """An inmutable data class that is strictly a data transfer object (DTO) whose main purpose
     is to carry data. Consists of the mark identifying the player who made a move, a numeric
     zero-based index in the string of cells, and the two states before and after making a move.
+
+    Attributes:
+        mark: Mark
+            Represent the mark of the player.
+        cell_index: int
+            Represent the position to play.
+        before_state: "GameState"
+            Represent the game state before the move.
+        after_state: "GameState"
+            Represent the game state after the move.
     """
     mark: Mark
     cell_index: int
@@ -107,6 +141,36 @@ class Move:
 class GameState:
     """An inmutable data Class that is strictly a data transfer object (DTO) whose main purpose
     is to carry data, consisting of the grid of cells and the starting player's mark
+
+    Attributes:
+        grid: Grid
+            Represents the grid, 9 elements X, O or space
+        starting_mark: Mark = Mark("X")
+            Represent the starting mark. Default to X
+
+    Methods:
+        __post_init__(self) -> None
+            Post instantiation hook that verifies that the gamestate is correct.
+        current_mark(self) -> Mark:
+            Cached getter of current mark.
+        game_not_started(self) -> bool:
+            Cached getter if current state is the initial state.
+        game_over(self) -> bool:
+            Cached getter to check if the game is ofver by check if there is a winner or
+            there is a tie.
+        tie(self) -> bool:
+            Cached getter to check if there is a tie by checking if
+            there is a winner or grid is empty.
+        winner(self) -> Mark | None:
+            Cached getter that check if there is a winner by checking winning patterns.
+        possible_moves(self) -> list[Move]:
+            Cached getter of possible moves.
+        make_random_move(self) -> Move | None:
+            Return possible move based on possible moves.
+        make_move_to(self, index: int) -> Move:
+            Return the move to make based on index.
+        evaluate_score(self, mark: Mark) -> int:
+            Returns score based on the result of the move.
     """
     grid: Grid
     starting_mark: Mark = Mark("X")
@@ -118,10 +182,10 @@ class GameState:
 
     @cached_property
     def current_mark(self) -> Mark:
-        """Cached getter of current mark
+        """Cached getter of current mark.
 
         Returns:
-            Mark: Mark of current state
+            Mark: Mark of current state.
         """
         if self.grid.x_count == self.grid.o_count:
             return self.starting_mark
@@ -129,7 +193,7 @@ class GameState:
 
     @cached_property
     def game_not_started(self) -> bool:
-        """Cached getter if current state is the initial state
+        """Cached getter if current state is the initial state.
 
         Returns:
             bool: Rather current turn is the first turn or not
@@ -139,17 +203,17 @@ class GameState:
     @cached_property
     def game_over(self) -> bool:
         """Cached getter to check if the game is ofver by check if there is a winner or
-        there is a tie
+        there is a tie.
 
         Returns:
-            bool: Rather the game is over or not
+            bool: Rather the game is over or not.
         """
         return self.winner is not None or self.tie
 
     @cached_property
     def tie(self) -> bool:
         """Cached getter to check if there is a tie by checking if
-        there is a winner or grid is empty
+        there is a winner or grid is empty.
 
         Returns:
             bool: Rather the game has a winner or grid is empty
@@ -158,10 +222,10 @@ class GameState:
 
     @cached_property
     def winner(self) -> Mark | None:
-        """Chaced getter that check if there is a winner by checking winning patterns
+        """Cached getter that check if there is a winner by checking winning patterns.
 
         Returns:
-            Mark | None: Could be X, O or None
+            Mark | None: Could be X, O or None.
         """
         for pattern in WINNING_PATTERNS:
             for mark in Mark:
@@ -187,7 +251,7 @@ class GameState:
 
     @cached_property
     def possible_moves(self) -> list[Move]:
-        """Cached getter of possible moves
+        """Cached getter of possible moves.
 
         Returns:
             list[Move]: list of possible moves
@@ -199,10 +263,10 @@ class GameState:
         return moves
 
     def make_random_move(self) -> Move | None:
-        """Mathod to select a possible move based on possible moves.
+        """Return possible move based on possible moves.
 
         Returns:
-            Move | None: Snapshot of moves
+            Move | None: Snapshot of moves.
         """
         try:
             return random.choice(self.possible_moves)
@@ -210,13 +274,13 @@ class GameState:
             return None
 
     def make_move_to(self, index: int) -> Move:
-        """Method to make a move base on index
+        """Return the move to make based on index.
 
         Args:
-            index (int): _description_
+            index (int): Position of the move.
 
         Raises:
-            InvalidMove: Custom exception
+            InvalidMove: Exception when a invalid move is selected
 
         Returns:
             Move: Snapshot of moves
@@ -238,16 +302,16 @@ class GameState:
         )
 
     def evaluate_score(self, mark: Mark) -> int:
-        """_summary_
+        """Returns score based on the result of the move.
 
         Args:
-            mark (Mark): Class that handles user marks
+            mark (Mark): Class that handles user marks.
 
         Raises:
-            UnknownGameScore: custom exception
+            UnknownGameScore: Exception when no score can be calculated.
 
         Returns:
-            int: score for the game
+            int: score for the game.
         """
         if self.game_over:
             if self.tie:

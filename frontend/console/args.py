@@ -1,4 +1,10 @@
-"""Module that handles CLI arguments and options
+"""Provide the classes and functions to handle CLI arguments and options.
+
+This module allows the handle CLI arguments and options.
+
+The module contains the following classes and functions:
+- `Args(NamedTuple)` - A class to create a namedtuple to handle arguments for CLI
+- `parse_args` - Returns type handled tuple with information about the players and initial Mark.
 """
 
 import argparse
@@ -20,18 +26,22 @@ PLAYER_CLASSES = {
 }
 
 class Args(NamedTuple):
-    """Class that handle arguments for CLI
+    """A class that handle arguments for CLI. Extends NamedTuple
 
-    Args:
-        NamedTuple (_type_): Player1, Player2, starting_mark
+    Attributes:
+        player1: Player
+            An instance of subclass of the Player class that represents a human or computer.
+        player2: Player
+            An instance of subclass of the Player class that represents a human or computer.
+        renderer: Renderer
+            An instance of subclass of the Renderer class that handles UI rendering.
     """
     player1: Player
     player2: Player
     starting_mark: Mark
 
 def parse_args() -> Args:
-    """Public method to start game according to CLI arguments. Player can be human,
-    random, or minimax.
+    """Returns type handled tuple with information about the players and initial Mark.
 
     Returns:
         Args: tuple[Player, Player, Mark] tuple with players and Mark

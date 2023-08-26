@@ -1,4 +1,11 @@
-"""Module with exceptions for tic tac toe subpackage
+"""Provide custom exceptions for the game.
+
+This module allows the raise of custom exceptions.
+
+The module contains the following custom exceptions:
+- `InvalidGameState`
+- `InvalidMove`
+- `UnknownGameScore`
 """
 
 class InvalidGameState(Exception):

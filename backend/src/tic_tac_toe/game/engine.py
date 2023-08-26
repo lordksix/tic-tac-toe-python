@@ -1,7 +1,12 @@
-"""Provide the class that handles the game
+"""Provide the class that handles the game.
 
 This module allows the game to run. It is the game engine.
 
+Typical usage example:
+
+    player1 = RandomComputerPlayer(Mark("X"))
+    player2 = RandomComputerPlayer(Mark("O"))
+    TicTacToe(player1, player2, ConsoleRenderer()).play()
 
 The module contains the following class:
 - `TicTacToe`

@@ -1,13 +1,17 @@
-"""Provide the classes to instantiate players, human or computer
+"""Provide the classes to instantiate players, human or computer.
 
-This module allows the creation of different categories of players
+This module allows the creation of different categories of players.
+
+Typical usage example:
+
+    player1 = RandomComputerPlayer(Mark("X"))
+    player2 = MinimaxComputerPlayer(Mark("O"))
 
 The module contains the following class:
 - `Player` - ABC
-- `ComputerPlayer` - ABC. Extension of class Player
-- `RandomComputerPlayer` - Extension of class ComputerPlayer
-- `MinimaxComputerPlayer` - ABC. Extension of class ComputerPlayer
-
+- `ComputerPlayer` - ABC. Extension of class Player.
+- `RandomComputerPlayer` - Extension of class ComputerPlayer.
+- `MinimaxComputerPlayer` - ABC. Extension of class ComputerPlayer.
 """
 import abc
 import time
@@ -17,41 +21,41 @@ from tic_tac_toe.logic.minimax import find_best_move
 from tic_tac_toe.logic.models import GameState, Mark, Move
 
 class Player(metaclass=abc.ABCMeta):
-    """Abstract class for the creation of players
+    """Abstract class for the creation of players.
 
     Args:
         metaclass (_type_, optional): Setting class as ABC. Defaults to abc.ABCMeta.
 
     Attributes:
         mark: Mark
-            An instance of Mark class that handles user marks
+            An instance of Mark class that handles user marks.
 
     Methods:
         make_move(self, game_state: GameState) -> GameState:
-            Handles the current player move
+            Handles the current player move.
         get_move(self, game_state: GameState) -> Move | None:
-            Determines current player base on the current game state. Abstract method
+            Determines current player base on the current game state. Abstract method.
     """
     def __init__(self, mark: Mark) -> None:
-        """
+        """Initializes the instance based on mark provided.
         Args:
-            mark (Mark): An instance class that handles user marks
+            mark (Mark): An instance class that handles user marks.
         """
         self.mark = mark
 
     def make_move(self, game_state: GameState) -> GameState:
         """Handles the current player move which depends on the get_move method
-        implemented in each subclass if it's the given player's turn and whether the move exists
+        implemented in each subclass if it's the given player's turn and whether the move exists.
 
         Args:
             game_state (GameState): current GameState, consisting of a current Grid (9 elemets that
             that can be X, O or spaces) and a starting Mark (default X).
 
         Raises:
-            InvalidMove: custom exception
+            InvalidMove: Exception when a invalid move is selected
         Returns:
             GameState: current GameState, consisting of a current Grid (9 elemets that
-            that can be X, O or spaces) and a starting Mark (default X)
+            that can be X, O or spaces) and a starting Mark (default X).
         """
         if self.mark is game_state.current_mark:
             if move := self.get_move(game_state):
@@ -131,10 +135,10 @@ class RandomComputerPlayer(ComputerPlayer):
         return game_state.make_random_move()
 
 class MinimaxComputerPlayer(ComputerPlayer):
-    """Class for the creation of computer players with move based on minimax algorithm
+    """Class for the creation of computer players with move based on minimax algorithm.
 
     Args:
-        ComputerPlayer (_type_): Abstract class for the creation of computer players
+        ComputerPlayer (_type_): Abstract class for the creation of computer players.
 
     Methods:
         get_computer_move(self, game_state: GameState) -> Move | None:
@@ -142,14 +146,14 @@ class MinimaxComputerPlayer(ComputerPlayer):
     """
     def get_computer_move(self, game_state: GameState) -> Move | None:
         """Return the current computer player's move in the given game state using
-        minimax algorithm
+        minimax algorithm.
 
         Args:
             game_state (GameState): current GameState, consisting of a current Grid (9 elemets that
             that can be X, O or spaces) and a starting Mark (default X).
 
         Returns:
-            Move | None: return a move class or none
+            Move | None: return a move class or none.
         """
         if game_state.game_not_started:
             return game_state.make_random_move()

@@ -1,4 +1,13 @@
-"""Module that with Mark and Grid classes"""
+"""Provide the classes for domain model.
+
+This module allows the creation of intances of Marks, Grids, Move and GameState.
+
+The module contains the following class:
+- `Mark` - A class that handles user marks.
+- `Grid` - A inmutable Class that handles the grid information.
+- `Move` - A inmutable data class that handles move information.
+- `GameState` - A inmutable data class that handles game state information.
+"""
 import enum
 import random
 import re
@@ -20,7 +29,7 @@ WINNING_PATTERNS = (
 )
 
 class Mark(enum.StrEnum):
-    """Class that handles user marks
+    """A class that handles user marks. it can be CROSS or X, or NAUGHT or O.
 
     Args:
         enum (_type_): CROSS or X, or NAUGHT or O
@@ -42,7 +51,7 @@ class Mark(enum.StrEnum):
 
 @dataclass(frozen=True)
 class Grid:
-    """Inmutable Class that handles the grid. It is instantiate as a empty grid 9 spaces as
+    """An inmutable Class that handles the grid. It is instantiate as a empty grid 9 spaces as
     default. It runs as Post instantiation hook that verifies that grid composition. Allowed
     cell position: 9 elements (X, O, or space)
 
@@ -85,9 +94,9 @@ class Grid:
 
 @dataclass(frozen=True)
 class Move:
-    """Inmutable data Class that is strictly a data transfer object (DTO) whose main purpose is to
-    carry data. Consists of the mark identifying the player who made a move, a numeric zero-based
-    index in the string of cells, and the two states before and after making a move.
+    """An inmutable data class that is strictly a data transfer object (DTO) whose main purpose
+    is to carry data. Consists of the mark identifying the player who made a move, a numeric
+    zero-based index in the string of cells, and the two states before and after making a move.
     """
     mark: Mark
     cell_index: int
@@ -96,8 +105,8 @@ class Move:
 
 @dataclass(frozen=True)
 class GameState:
-    """Inmutable data Class that is strictly a data transfer object (DTO) whose main purpose is to
-    carry data, consisting of the grid of cells and the starting player's mark
+    """An inmutable data Class that is strictly a data transfer object (DTO) whose main purpose
+    is to carry data, consisting of the grid of cells and the starting player's mark
     """
     grid: Grid
     starting_mark: Mark = Mark("X")

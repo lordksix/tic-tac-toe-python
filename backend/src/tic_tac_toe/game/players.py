@@ -66,9 +66,8 @@ class Player(metaclass=abc.ABCMeta):
 
 class ComputerPlayer(Player, metaclass=abc.ABCMeta):
     """Abstract class for the creation of computer players. Extends as metaclass, abc.ABCMeta.
-    Extends Player abstract class An instance of subclass of the Player class that represents a human or
-    computer.
-
+        Extends Player abstract class An instance of subclass of the Player class that represents
+        a human or computer.
 
     Attributes:
         mark: Mark

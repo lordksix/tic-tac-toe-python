@@ -1,4 +1,9 @@
-"""Module that handles classes for visual and state rendering
+"""Provide classes for visual and state rendering
+
+This module allows the creation of UI rendering
+
+The module contains the following class:
+- `Renderer`
 """
 import abc
 
@@ -9,6 +14,10 @@ class Renderer(metaclass=abc.ABCMeta):
 
     Args:
         metaclass (_type_, optional): Setting class as ABC. Defaults to abc.ABCMeta.
+
+    Methods:
+        def render(self, game_state: GameState) -> None:
+            Render the current game state.
     """
     @abc.abstractmethod
     def render(self, game_state: GameState) -> None:

@@ -1,4 +1,11 @@
-"""Module that handles the game and logic
+"""Provide the class that handles the game
+
+This module allows the game to run. It is the game engine.
+
+
+The module contains the following class:
+- `TicTacToe`
+
 """
 from dataclasses import dataclass
 from typing import Callable, TypeAlias
@@ -13,7 +20,25 @@ ErrorHandler: TypeAlias = Callable[[Exception], None]
 
 @dataclass(frozen=True)
 class TicTacToe:
-    """Application engine
+    """A class used to represebt the game engine
+
+    ...
+
+    Attributes:
+        player1: Player
+            An instance of subclass of the Player class that represents a human or computer
+        player2: Player
+            An instance of subclass of the Player class that represents a human or computer
+        renderer: Renderer
+            An instance of subclass of the Renderer class that handles UI rendering
+        error_handler: ErrorHandler | None = None
+            A placehholder for a callback function that handles InvalidMove exceptions
+
+    Methods:
+        play(self, starting_mark: Mark = Mark("X")) -> None:
+            Handles the flow of the game. The engine itself
+        def get_current_player(self, game_state: GameState) -> Player:
+            Determines current player base on the current game state
     """
     player1: Player
     player2: Player
@@ -26,7 +51,7 @@ class TicTacToe:
         validate_players(self.player1, self.player2)
 
     def play(self, starting_mark: Mark = Mark("X")) -> None:
-        """Method that starts and handles the game until the game is over
+        """Starts and handles the game until the game is over
 
         Args:
             starting_mark (Mark, optional): Initial Mark. Defaults to Mark("X").
@@ -44,7 +69,7 @@ class TicTacToe:
                     self.error_handler(ex)
 
     def get_current_player(self, game_state: GameState) -> Player:
-        """Method that determines current player base on the current game state
+        """Determines current player base on the current game state
 
         Args:
             game_state (GameState): current GameState, consisting of a current Grid (9 elemets that

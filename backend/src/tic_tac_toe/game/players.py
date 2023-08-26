@@ -1,4 +1,13 @@
-"""Module with player classes
+"""Provide the classes to instantiate players, human or computer
+
+This module allows the creation of different categories of players
+
+The module contains the following class:
+- `Player` - ABC
+- `ComputerPlayer` - ABC. Extension of class Player
+- `RandomComputerPlayer` - Extension of class ComputerPlayer
+- `MinimaxComputerPlayer` - ABC. Extension of class ComputerPlayer
+
 """
 import abc
 import time
@@ -12,12 +21,26 @@ class Player(metaclass=abc.ABCMeta):
 
     Args:
         metaclass (_type_, optional): Setting class as ABC. Defaults to abc.ABCMeta.
+
+    Attributes:
+        mark: Mark
+            An instance of Mark class that handles user marks
+
+    Methods:
+        make_move(self, game_state: GameState) -> GameState:
+            Handles the current player move
+        get_move(self, game_state: GameState) -> Move | None:
+            Determines current player base on the current game state. Abstract method
     """
     def __init__(self, mark: Mark) -> None:
+        """
+        Args:
+            mark (Mark): An instance class that handles user marks
+        """
         self.mark = mark
 
     def make_move(self, game_state: GameState) -> GameState:
-        """Public method that handles player move which depends on the get_move method
+        """Handles the current player move which depends on the get_move method
         implemented in each subclass if it's the given player's turn and whether the move exists
 
         Args:
@@ -44,10 +67,27 @@ class ComputerPlayer(Player, metaclass=abc.ABCMeta):
     """Abstract class for the creation of computer players
 
     Args:
-        Player (_type_): Abstract class for the creation of players
+        Player (_type_): An instance of subclass of the Player class that represents a human or
+        computer
         metaclass (_type_, optional): Setting class as ABC. Defaults to abc.ABCMeta.
+
+    Attributes:
+        mark: Mark
+            An instance of Mark class that handles user marks
+
+    Methods:
+        get_move(self, game_state: GameState) -> Move | None:
+            Return the current computer player's move in the given game state
+        get_computer_move(self, game_state: GameState) -> Move | None:
+            Determines current player base on the current game state. Abstract method
     """
     def __init__(self, mark: Mark, delay_seconds: float = 0.25) -> None:
+        """
+        Args:
+            mark (Mark): An instance class that handles user marks
+            delay_seconds (float, optional): Represents the delay time for the computer to playe.
+            Defaults to 0.25.
+        """
         super().__init__(mark)
         self.delay_seconds = delay_seconds
 
@@ -73,6 +113,10 @@ class RandomComputerPlayer(ComputerPlayer):
 
     Args:
         ComputerPlayer (_type_): Abstract class for the creation of computer players
+
+    Methods:
+        get_computer_move(self, game_state: GameState) -> Move | None:
+            Return the current computer player's random move in the given game state.
     """
     def get_computer_move(self, game_state: GameState) -> Move | None:
         """Return the current computer player's random move in the given game state.
@@ -91,9 +135,14 @@ class MinimaxComputerPlayer(ComputerPlayer):
 
     Args:
         ComputerPlayer (_type_): Abstract class for the creation of computer players
+
+    Methods:
+        get_computer_move(self, game_state: GameState) -> Move | None:
+            Return the current computer player's move in the given game state.
     """
     def get_computer_move(self, game_state: GameState) -> Move | None:
-        """Return the current computer player's move in the given game state.
+        """Return the current computer player's move in the given game state using
+        minimax algorithm
 
         Args:
             game_state (GameState): current GameState, consisting of a current Grid (9 elemets that

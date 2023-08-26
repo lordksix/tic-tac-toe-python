@@ -1,0 +1,2 @@
+# Args module
+::: console.args

@@ -1,4 +1,4 @@
-"""Module to run game
+"""Provide script to start game
 """
 from tic_tac_toe.game.engine import TicTacToe
 from tic_tac_toe.game.players import RandomComputerPlayer

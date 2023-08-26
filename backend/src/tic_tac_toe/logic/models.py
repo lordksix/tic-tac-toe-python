@@ -1,10 +1,11 @@
 """Module that with Mark and Grid classes"""
 import enum
+import random
 import re
 from dataclasses import dataclass
 from functools import cached_property
 
-from tic_tac_toe.logic.exceptions import InvalidMove
+from tic_tac_toe.logic.exceptions import InvalidMove, UnknownGameScore
 from tic_tac_toe.logic.validators import validate_game_state, validate_grid
 
 WINNING_PATTERNS = (
@@ -188,8 +189,19 @@ class GameState:
                 moves.append(self.make_move_to(match.start()))
         return moves
 
+    def make_random_move(self) -> Move | None:
+        """Mathod to select a possible move based on possible moves.
+
+        Returns:
+            Move | None: Snapshot of moves
+        """
+        try:
+            return random.choice(self.possible_moves)
+        except IndexError:
+            return None
+
     def make_move_to(self, index: int) -> Move:
-        """_summary_
+        """Method to make a move base on index
 
         Args:
             index (int): _description_
@@ -198,7 +210,7 @@ class GameState:
             InvalidMove: Custom exception
 
         Returns:
-            Move: Snapshot of movies
+            Move: Snapshot of moves
         """
         if self.grid.cells[index] != " ":
             raise InvalidMove("Cell is not empty")
@@ -215,3 +227,23 @@ class GameState:
                 self.starting_mark,
             ),
         )
+
+    def evaluate_score(self, mark: Mark) -> int:
+        """_summary_
+
+        Args:
+            mark (Mark): Class that handles user marks
+
+        Raises:
+            UnknownGameScore: custom exception
+
+        Returns:
+            int: score for the game
+        """
+        if self.game_over:
+            if self.tie:
+                return 0
+            if self.winner is mark:
+                return 1
+            return -1
+        raise UnknownGameScore("Game is not over yet")

@@ -1,10 +1,10 @@
 """Module with player classes
 """
 import abc
-import random
 import time
 
 from tic_tac_toe.logic.exceptions import InvalidMove
+from tic_tac_toe.logic.minimax import find_best_move
 from tic_tac_toe.logic.models import GameState, Mark, Move
 
 class Player(metaclass=abc.ABCMeta):
@@ -69,7 +69,25 @@ class ComputerPlayer(Player, metaclass=abc.ABCMeta):
         """Return the computer's move in the given game state."""
 
 class RandomComputerPlayer(ComputerPlayer):
-    """Class for the creation of computer players
+    """Class for the creation of computer players with random moves
+
+    Args:
+        ComputerPlayer (_type_): Abstract class for the creation of computer players
+    """
+    def get_computer_move(self, game_state: GameState) -> Move | None:
+        """Return the current computer player's random move in the given game state.
+
+        Args:
+            game_state (GameState): current GameState, consisting of a current Grid (9 elemets that
+            that can be X, O or spaces) and a starting Mark (default X).
+
+        Returns:
+            Move | None: return a move class or none
+        """
+        return game_state.make_random_move()
+
+class MinimaxComputerPlayer(ComputerPlayer):
+    """Class for the creation of computer players with move based on minimax algorithm
 
     Args:
         ComputerPlayer (_type_): Abstract class for the creation of computer players
@@ -84,7 +102,6 @@ class RandomComputerPlayer(ComputerPlayer):
         Returns:
             Move | None: return a move class or none
         """
-        try:
-            return random.choice(game_state.possible_moves)
-        except IndexError:
-            return None
+        if game_state.game_not_started:
+            return game_state.make_random_move()
+        return find_best_move(game_state)

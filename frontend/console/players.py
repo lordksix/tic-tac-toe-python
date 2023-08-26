@@ -15,10 +15,7 @@ from tic_tac_toe.logic.exceptions import InvalidMove
 from tic_tac_toe.logic.models import GameState, Move
 
 class ConsolePlayer(Player):
-    """A class that represents human players.
-
-    Args:
-        Player (_type_): Abstract class for the creation of players.
+    """A class that represents human players. Extend abstract class for the creation of players.
 
     Methods:
         get_move(self, game_state: GameState) -> Move | None:
@@ -29,7 +26,7 @@ class ConsolePlayer(Player):
 
         Args:
             game_state (GameState): current GameState, consisting of a current Grid (9 elemets that
-            that can be X, O or spaces) and a starting Mark (default X).
+                that can be X, O or spaces) and a starting Mark (default X).
 
         Returns:
             Move | None: return a move class or none.

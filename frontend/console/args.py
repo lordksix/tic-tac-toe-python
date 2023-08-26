@@ -26,10 +26,7 @@ PLAYER_CLASSES = {
 }
 
 class Args(NamedTuple):
-    """A class that handle arguments for CLI
-
-    Args:
-        NamedTuple (_type_): Player1, Player2, starting_mark.
+    """A class that handle arguments for CLI. Extends NamedTuple
 
     Attributes:
         player1: Player

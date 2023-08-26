@@ -23,10 +23,8 @@ from tic_tac_toe.game.renderers import Renderer
 from tic_tac_toe.logic.models import GameState
 
 class ConsoleRenderer(Renderer):
-    """A class to handler render UI in the console.
-
-    Args:
-        Renderer (_type_): Abstract class for the creation of visual and state rendering
+    """A class to handler render UI in the console. Extend abstract class Renderar
+        for the creation of visual and state rendering
 
     Methods:
         render(self, game_state: GameState) -> None:
@@ -37,7 +35,7 @@ class ConsoleRenderer(Renderer):
 
         Args:
             game_state (GameState): current GameState, consisting of a current Grid (9 elemets that
-            that can be X, O or spaces) and a starting Mark (default X).
+                that can be X, O or spaces) and a starting Mark (default X).
         """
         clear_screen()
         if game_state.winner:

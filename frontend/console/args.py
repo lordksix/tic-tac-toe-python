@@ -4,7 +4,11 @@
 import argparse
 from typing import NamedTuple
 
-from tic_tac_toe.game.players import Player, RandomComputerPlayer
+from tic_tac_toe.game.players import (
+    Player,
+    RandomComputerPlayer,
+    MinimaxComputerPlayer,
+)
 from tic_tac_toe.logic.models import Mark
 
 from .players import ConsolePlayer
@@ -12,6 +16,7 @@ from .players import ConsolePlayer
 PLAYER_CLASSES = {
     "human": ConsolePlayer,
     "random": RandomComputerPlayer,
+    "minimax": MinimaxComputerPlayer,
 }
 
 class Args(NamedTuple):
@@ -25,7 +30,8 @@ class Args(NamedTuple):
     starting_mark: Mark
 
 def parse_args() -> Args:
-    """Public method to start game according to CLI arguments
+    """Public method to start game according to CLI arguments. Player can be human,
+    random, or minimax.
 
     Returns:
         Args: tuple[Player, Player, Mark] tuple with players and Mark
@@ -42,7 +48,7 @@ def parse_args() -> Args:
         "-O",
         dest="player_o",
         choices=PLAYER_CLASSES.keys(),
-        default="random",
+        default="minimax",
     )
     parser.add_argument(
         "-s",

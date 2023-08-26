@@ -1,5 +1,6 @@
 """Module that with Mark and Grid classes"""
 import enum
+import random
 import re
 from dataclasses import dataclass
 from functools import cached_property
@@ -188,8 +189,19 @@ class GameState:
                 moves.append(self.make_move_to(match.start()))
         return moves
 
+    def make_random_move(self) -> Move | None:
+        """Mathod to select a possible move based on possible moves.
+
+        Returns:
+            Move | None: Snapshot of moves
+        """
+        try:
+            return random.choice(self.possible_moves)
+        except IndexError:
+            return None
+
     def make_move_to(self, index: int) -> Move:
-        """_summary_
+        """Method to make a move base on index
 
         Args:
             index (int): _description_
@@ -198,7 +210,7 @@ class GameState:
             InvalidMove: Custom exception
 
         Returns:
-            Move: Snapshot of movies
+            Move: Snapshot of moves
         """
         if self.grid.cells[index] != " ":
             raise InvalidMove("Cell is not empty")

@@ -26,7 +26,8 @@ def validate_game_state(game_state: GameState) -> None:
     """Method to verify a correct gamestate
 
     Args:
-        game_state (GameState): GameState
+        game_state (GameState): current GameState, consisting of a current Grid (9 elemets that
+            that can be X, O or spaces) and a starting Mark (default X)
     """
     validate_number_of_marks(game_state.grid)
     validate_starting_mark(game_state.grid, game_state.starting_mark)

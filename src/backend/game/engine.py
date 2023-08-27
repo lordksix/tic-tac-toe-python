@@ -24,6 +24,7 @@ from .renderers import Renderer
 
 ErrorHandler: TypeAlias = Callable[[Exception], None]
 
+
 @dataclass(frozen=True)
 class TicTacToe:
     """A class used to represebt the game engine.
@@ -44,14 +45,14 @@ class TicTacToe:
         def get_current_player(self, game_state: GameState) -> Player:
             Determines current player base on the current game state
     """
+
     player1: Player
     player2: Player
     renderer: Renderer
     error_handler: ErrorHandler | None = None
 
     def __post_init__(self):
-        """Post instantiation hook that verifies that the player instantiation was corrected
-        """
+        """Post instantiation hook that verifies that the player instantiation was corrected"""
         validate_players(self.player1, self.player2)
 
     def play(self, starting_mark: Mark = Mark("X")) -> None:

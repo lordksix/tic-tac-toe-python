@@ -1,2 +1,2 @@
 # Players module
-::: tic_tac_toe.game.players
+::: backend.game.players

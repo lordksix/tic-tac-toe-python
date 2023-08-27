@@ -6,7 +6,7 @@ reference for the technical implementation of the
 ## Backend subpackages
 
 ### Game subpackage
-::: tic_tac_toe.game
+::: backend.game
 
 This subpackage has the following modules:
 
@@ -16,7 +16,7 @@ This subpackage has the following modules:
 
 
 ### Logic subpackage
-::: tic_tac_toe.logic
+::: backend.logic
 
 This subpackage has the following modules:
 
@@ -30,7 +30,7 @@ This subpackage has the following modules:
 
 ### Console subpackage
 
-::: console
+::: frontend.console
 
 This subpackage has the following modules:
 

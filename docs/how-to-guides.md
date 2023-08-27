@@ -11,7 +11,6 @@ Python script:
 
     tic-tac-toe/
     │
-    │
     ├── docs/
     │   │
     │   |── explanation.md
@@ -20,39 +19,35 @@ Python script:
     │   ├── how-to-guides.md
     |   └── reference.md
     │
-    ├── frontends/
-    │   │
-    │   │
-    │   │
-    │   └── console/
-    │   │    ├── __init__.py
-    │   │    └── __main__.py
-    │   │    ├── arg.py
-    │   │    └── cli.py
-    │   │    ├── players.py
-    │   │    └── renderers.py
-    │   │
-    │   └── play.py
-    │
-    └── backend/tic_tac_toe
+    └── src/
+        ├── frontends/
+        │   |
+        |   └── console/
+        |   │    ├── __init__.py
+        |   │    └── __main__.py
+        |   │    ├── arg.py
+        |   │    └── cli.py
+        |   │    ├── players.py
+        |   │    └── renderers.py
+        |   |
+        |   ├── __init__.py
+        |   └── play.py
         │
-        ├── src/
+        ├── backend/
         │   │
-        │   └── tic_tac_toe/
-        │       │
-        │       ├── game/
-        │       │   ├── __init__.py
-        │       │   ├── engine.py
-        │       │   ├── players.py
-        │       │   └── renderers.py
-        │       │
-        │       ├── logic/
-        │       │   ├── __init__.py
-        │       │   ├── exceptions.py
-        │       │   ├── models.py
-        │       │   └── validators.py
-        │       │
-        │       └── __init__.py
+        │   ├── game/
+        │   │   ├── __init__.py
+        │   │   ├── engine.py
+        │   │   ├── players.py
+        │   │   └── renderers.py
+        │   │
+        │   ├── logic/
+        │   │   ├── __init__.py
+        │   │   ├── exceptions.py
+        │   │   ├── models.py
+        │   │   └── validators.py
+        │   │
+        │   └── __init__.py
         │
         └── pyproject.toml
 
@@ -60,15 +55,8 @@ You can run the script `play.py`, to run the most basic and
 default version of the game:
 
 ```sh
-  cd frontends
-  python -m play
+  tictactoe -X human -O minimax
 ```
 
-In order to use CLI to specify the difficulty and player available:
-
-```sh
-  cd frontends
-  python -m console -X human -O minimax
-```
 Where -X mean the player that uses the X mark, options: human, random, minimax
 Where -O mean the player that uses the O mark, options: human, random, minimax

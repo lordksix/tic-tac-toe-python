@@ -1,2 +1,2 @@
 # CLI module
-::: console.cli
+::: frontend.console.cli

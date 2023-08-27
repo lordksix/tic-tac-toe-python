@@ -1,3 +1,3 @@
 # Models module
-::: tic_tac_toe.logic.models
+::: backend.logic.models
 

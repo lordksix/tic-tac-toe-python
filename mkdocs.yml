@@ -1,9 +1,18 @@
 site_name: Tic Tac Toe Docs
+site_url: https://github.com/lordksix/tic-tac-toe-python
+site_description: Tic Tac Toe with Python by lordksix
+site_author: lordksix
+
+repo_url: https://github.com/lordksix/tic-tac-toe-python
 
 theme:
   name: "material"
 
 plugins:
+- with-pdf:
+    copyright: Copyright &copy; 2023 Wladimir Pasquel.
+    cover_subtitle: Project documentation with Markdown.
+    output_path: ../tictactoe-docs.pdf
 - mkdocstrings:
     handlers:
       python:

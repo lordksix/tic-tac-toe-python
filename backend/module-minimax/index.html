@@ -6,7 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Tic Tac Toe with Python by lordksix">
       
+      
+        <meta name="author" content="lordksix">
+      
+      
+        <link rel="canonical" href="https://github.com/lordksix/tic-tac-toe-python/backend/module-minimax/">
       
       
         <link rel="prev" href="../module-exceptions/">
@@ -113,6 +119,18 @@
     
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/lordksix/tic-tac-toe-python" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -146,6 +164,18 @@
     </a>
     Tic Tac Toe Docs
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lordksix/tic-tac-toe-python" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -575,6 +605,9 @@
                 
                   
 
+  
+  
+
 
 <h1 id="minimax-module">Minimax module</h1>
 
@@ -595,18 +628,15 @@ kind of algorithms.</p>
 <p><strong>Examples:</strong></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">tic_tac_toe.logic.minimax</span> <span class="kn">import</span> <span class="n">minimax</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">tic_tac_toe.logic.models</span> <span class="kn">import</span> <span class="n">GameState</span><span class="p">,</span> <span class="n">Grid</span><span class="p">,</span> <span class="n">Mark</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">preview</span><span class="p">(</span><span class="n">cells</span><span class="p">):</span>
+<span class="go">        print(cells[:3], cells[3:6], cells[6:], sep=&#39;\n&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">game_state</span> <span class="o">=</span> <span class="n">GameState</span><span class="p">(</span><span class="n">Grid</span><span class="p">(</span><span class="s2">&quot;XXO O X O&quot;</span><span class="p">),</span> <span class="n">starting_mark</span><span class="o">=</span><span class="n">Mark</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">move</span> <span class="ow">in</span> <span class="n">game_state</span><span class="o">.</span><span class="n">possible_moves</span><span class="p">:</span>
+<span class="go">        print(&quot;Score:&quot;, minimax(move, maximizer=Mark(&#39;X&#39;)))</span>
+<span class="go">        preview(move.after_state.grid.cells)</span>
+<span class="go">        print(&#39;-&#39; * 10)</span>
 </code></pre></div>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">preview</span><span class="p">(</span><span class="n">cells</span><span class="p">):</span>
-<span class="go">        print(cells[:3], cells[3:6], cells[6:], sep=&quot;</span>
-</code></pre></div>
-      <p>")</p>
-<pre><code>&gt;&gt;&gt; game_state = GameState(Grid("XXO O X O"), starting_mark=Mark("X"))
-&gt;&gt;&gt; for move in game_state.possible_moves:
-        print("Score:", minimax(move, maximizer=Mark("X")))
-        preview(move.after_state.grid.cells)
-        print("-" * 10)
-</code></pre>
-<p>The module contains the following functions:
+      <p>The module contains the following functions:
 - <code>find_best_move(game_state: GameState)</code> - Return the best move available.
 - <code>minimax(
     move: Move, maximizer: Mark, choose_highest_score: bool = False
@@ -699,7 +729,9 @@ zero-based index in the string of cells, and the two states before and after mak
 
           <details class="quote">
             <summary>Source code in <code>src\backend\logic\minimax.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">31</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
 <span class="normal">32</span>
 <span class="normal">33</span>
 <span class="normal">34</span>
@@ -711,9 +743,7 @@ zero-based index in the string of cells, and the two states before and after mak
 <span class="normal">40</span>
 <span class="normal">41</span>
 <span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">find_best_move</span><span class="p">(</span><span class="n">game_state</span><span class="p">:</span> <span class="n">GameState</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Move</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">find_best_move</span><span class="p">(</span><span class="n">game_state</span><span class="p">:</span> <span class="n">GameState</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Move</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the best move available.</span>
 
 <span class="sd">    Args:</span>
@@ -837,7 +867,9 @@ and after making a move.</p>
 
           <details class="quote">
             <summary>Source code in <code>src\backend\logic\minimax.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">47</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
 <span class="normal">48</span>
 <span class="normal">49</span>
 <span class="normal">50</span>
@@ -856,9 +888,7 @@ and after making a move.</p>
 <span class="normal">63</span>
 <span class="normal">64</span>
 <span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">minimax</span><span class="p">(</span>
+<span class="normal">66</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">minimax</span><span class="p">(</span>
     <span class="n">move</span><span class="p">:</span> <span class="n">Move</span><span class="p">,</span> <span class="n">maximizer</span><span class="p">:</span> <span class="n">Mark</span><span class="p">,</span> <span class="n">choose_highest_score</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return 1, 0 or -1 base in the result of the next move.</span>

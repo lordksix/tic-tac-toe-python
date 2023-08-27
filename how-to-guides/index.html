@@ -6,7 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Tic Tac Toe with Python by lordksix">
       
+      
+        <meta name="author" content="lordksix">
+      
+      
+        <link rel="canonical" href="https://github.com/lordksix/tic-tac-toe-python/how-to-guides/">
       
       
         <link rel="prev" href="..">
@@ -113,6 +119,18 @@
     
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/lordksix/tic-tac-toe-python" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -146,6 +164,18 @@
     </a>
     Tic Tac Toe Docs
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lordksix/tic-tac-toe-python" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -541,6 +571,9 @@
                 
                   
 
+  
+  
+
 
   <h1>How-To Guides</h1>
 
@@ -554,7 +587,6 @@ the <code>tic-tac-toe-python/</code> folder in the same directory as your
 Python script:</p>
 <pre><code>tic-tac-toe/
 │
-│
 ├── docs/
 │   │
 │   |── explanation.md
@@ -563,50 +595,41 @@ Python script:</p>
 │   ├── how-to-guides.md
 |   └── reference.md
 │
-├── frontends/
-│   │
-│   │
-│   │
-│   └── console/
-│   │    ├── __init__.py
-│   │    └── __main__.py
-│   │    ├── arg.py
-│   │    └── cli.py
-│   │    ├── players.py
-│   │    └── renderers.py
-│   │
-│   └── play.py
-│
-└── backend/tic_tac_toe
+└── src/
+    ├── frontends/
+    │   |
+    |   └── console/
+    |   │    ├── __init__.py
+    |   │    └── __main__.py
+    |   │    ├── arg.py
+    |   │    └── cli.py
+    |   │    ├── players.py
+    |   │    └── renderers.py
+    |   |
+    |   ├── __init__.py
+    |   └── play.py
     │
-    ├── src/
+    ├── backend/
     │   │
-    │   └── tic_tac_toe/
-    │       │
-    │       ├── game/
-    │       │   ├── __init__.py
-    │       │   ├── engine.py
-    │       │   ├── players.py
-    │       │   └── renderers.py
-    │       │
-    │       ├── logic/
-    │       │   ├── __init__.py
-    │       │   ├── exceptions.py
-    │       │   ├── models.py
-    │       │   └── validators.py
-    │       │
-    │       └── __init__.py
+    │   ├── game/
+    │   │   ├── __init__.py
+    │   │   ├── engine.py
+    │   │   ├── players.py
+    │   │   └── renderers.py
+    │   │
+    │   ├── logic/
+    │   │   ├── __init__.py
+    │   │   ├── exceptions.py
+    │   │   ├── models.py
+    │   │   └── validators.py
+    │   │
+    │   └── __init__.py
     │
     └── pyproject.toml
 </code></pre>
 <p>You can run the script <code>play.py</code>, to run the most basic and
 default version of the game:</p>
-<pre><code class="language-sh">  cd frontends
-  python -m play
-</code></pre>
-<p>In order to use CLI to specify the difficulty and player available:</p>
-<pre><code class="language-sh">  cd frontends
-  python -m console -X human -O minimax
+<pre><code class="language-sh">  tictactoe -X human -O minimax
 </code></pre>
 <p>Where -X mean the player that uses the X mark, options: human, random, minimax
 Where -O mean the player that uses the O mark, options: human, random, minimax</p>

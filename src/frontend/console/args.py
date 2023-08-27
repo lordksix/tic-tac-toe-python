@@ -10,12 +10,12 @@ The module contains the following classes and functions:
 import argparse
 from typing import NamedTuple
 
-from tic_tac_toe.game.players import (
+from backend.game.players import (
     Player,
     RandomComputerPlayer,
     MinimaxComputerPlayer,
 )
-from tic_tac_toe.logic.models import Mark
+from backend.logic.models import Mark
 
 from .players import ConsolePlayer
 

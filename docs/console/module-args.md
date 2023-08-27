@@ -1,2 +1,2 @@
 # Args module
-::: console.args
+::: frontend.console.args

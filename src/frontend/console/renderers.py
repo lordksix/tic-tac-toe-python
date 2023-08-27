@@ -19,8 +19,8 @@ The module contains the following functions:
 import textwrap
 from typing import Iterable
 
-from tic_tac_toe.game.renderers import Renderer
-from tic_tac_toe.logic.models import GameState
+from backend.game.renderers import Renderer
+from backend.logic.models import GameState
 
 class ConsoleRenderer(Renderer):
     """A class to handler render UI in the console. Extend abstract class Renderar

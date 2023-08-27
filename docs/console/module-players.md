@@ -1,4 +1,4 @@
 # Players module
-::: console.players
+::: frontend.console.players
 
 

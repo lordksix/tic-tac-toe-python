@@ -7,7 +7,7 @@ The module contains the following class:
 """
 import abc
 
-from tic_tac_toe.logic.models import GameState
+from backend.logic.models import GameState
 
 class Renderer(metaclass=abc.ABCMeta):
     """Abstract class for the creation of visual and state rendering. Extends as

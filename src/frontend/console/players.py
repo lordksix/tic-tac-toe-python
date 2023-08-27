@@ -10,9 +10,9 @@ The module contains the following functions:
 """
 import re
 
-from tic_tac_toe.game.players import Player
-from tic_tac_toe.logic.exceptions import InvalidMove
-from tic_tac_toe.logic.models import GameState, Move
+from backend.game.players import Player
+from backend.logic.exceptions import InvalidMove
+from backend.logic.models import GameState, Move
 
 class ConsolePlayer(Player):
     """A class that represents human players. Extend abstract class for the creation of players.

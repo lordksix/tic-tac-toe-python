@@ -1,3 +1,3 @@
 # Renderers module
-::: console.renderers
+::: frontend.console.renderers
 

@@ -22,10 +22,10 @@ your use case by looking at the different pages.
 ## Project Overview
 
 ### Backend package
-::: tic_tac_toe
+::: backend
 
 ### Frontend package
-::: console
+::: frontend
 
 ## Acknowledgements
 

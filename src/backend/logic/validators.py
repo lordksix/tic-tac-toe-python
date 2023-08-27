@@ -38,11 +38,11 @@ The module contains the following functions:
 from __future__ import annotations
 import re
 from typing import TYPE_CHECKING
-from tic_tac_toe.logic.exceptions import InvalidGameState
+from backend.logic.exceptions import InvalidGameState
 
 if TYPE_CHECKING:
-    from tic_tac_toe.game.players import Player
-    from tic_tac_toe.logic.models import GameState, Grid, Mark
+    from backend.game.players import Player
+    from backend.logic.models import GameState, Grid, Mark
 
 def validate_grid(grid: Grid) -> None:
     """Verify that the grid is compose of 9 elements (X, O, or

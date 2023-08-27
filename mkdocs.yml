@@ -7,7 +7,7 @@ plugins:
 - mkdocstrings:
     handlers:
       python:
-        paths: [src, frontend]
+        paths: [src]
 
 nav:
   - Tic Tac Toe Docs: index.md
@@ -15,3 +15,14 @@ nav:
   - Reference: reference.md
   - Explanations: explanation.md
   - Tutorials: tutorials.md
+  - backend\module-engine.md
+  - backend\module-exceptions.md
+  - backend\module-minimax.md
+  - backend\module-models.md
+  - backend\module-players.md
+  - backend\module-renderers.md
+  - backend\module-validators.md
+  - console\module-args.md
+  - console\module-cli.md
+  - console\module-players.md
+  - console\module-renderers.md

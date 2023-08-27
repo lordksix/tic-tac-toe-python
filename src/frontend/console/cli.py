@@ -4,12 +4,13 @@ This module allows the handle CLI start game
 
 Examples:
     >>> python -m console -X human -O human
+    >>> tictactoe -X human -O human
 
 The module contains the following classes and functions:
 - `main` - Handle start game from CLI
 """
 
-from tic_tac_toe.game.engine import TicTacToe
+from backend.game.engine import TicTacToe
 
 from .args import parse_args
 from .renderers import ConsoleRenderer

@@ -14,4 +14,14 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
-keywords = ["game", "tictactoe"]
+keywords = ["game", "tictactoe", "minimax"]
+
+
+requires-python = ">=3.11"
+
+    [project.scripts]
+    tictactoe = "frontend.__main__:main"
+
+    [project.urls]
+    repository = "https://github.com/lordksix/tic-tac-toe-python"
+    documentation = "https://lordksix.github.io/tic-tac-toe-python/"

@@ -2,7 +2,8 @@
 
 This module allows the game to run. It is the game engine.
 
-Example:
+Examples:
+
     >>> player1 = RandomComputerPlayer(Mark("X"))
     >>> player2 = RandomComputerPlayer(Mark("O"))
     >>> TicTacToe(player1, player2, ConsoleRenderer()).play()
@@ -14,11 +15,12 @@ The module contains the following class:
 from dataclasses import dataclass
 from typing import Callable, TypeAlias
 
-from tic_tac_toe.game.players import Player
-from tic_tac_toe.game.renderers import Renderer
-from tic_tac_toe.logic.exceptions import InvalidMove
-from tic_tac_toe.logic.models import GameState, Grid, Mark
-from tic_tac_toe.logic.validators import validate_players
+from backend.logic.exceptions import InvalidMove
+from backend.logic.models import GameState, Grid, Mark
+from backend.logic.validators import validate_players
+
+from .players import Player
+from .renderers import Renderer
 
 ErrorHandler: TypeAlias = Callable[[Exception], None]
 

@@ -14,8 +14,8 @@ import re
 from dataclasses import dataclass
 from functools import cached_property
 
-from tic_tac_toe.logic.exceptions import InvalidMove, UnknownGameScore
-from tic_tac_toe.logic.validators import validate_game_state, validate_grid
+from backend.logic.exceptions import InvalidMove, UnknownGameScore
+from backend.logic.validators import validate_game_state, validate_grid
 
 WINNING_PATTERNS = (
     "???......",

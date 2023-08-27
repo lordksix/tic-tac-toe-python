@@ -7,15 +7,13 @@ Examples:
 
     >>> from tic_tac_toe.logic.minimax import minimax
     >>> from tic_tac_toe.logic.models import GameState, Grid, Mark
-
     >>> def preview(cells):
-            print(cells[:3], cells[3:6], cells[6:], sep="\n")
-
-    >>> game_state = GameState(Grid("XXO O X O"), starting_mark=Mark("X"))
+            print(cells[:3], cells[3:6], cells[6:], sep='\\n')
+    >>> game_state = GameState(Grid("XXO O X O"), starting_mark=Mark('X'))
     >>> for move in game_state.possible_moves:
-            print("Score:", minimax(move, maximizer=Mark("X")))
+            print("Score:", minimax(move, maximizer=Mark('X')))
             preview(move.after_state.grid.cells)
-            print("-" * 10)
+            print('-' * 10)
 
 The module contains the following functions:
 - `find_best_move(game_state: GameState)` - Return the best move available.
@@ -26,7 +24,7 @@ The module contains the following functions:
 
 from functools import partial
 
-from tic_tac_toe.logic.models import GameState, Mark, Move
+from backend.logic.models import GameState, Mark, Move
 
 def find_best_move(game_state: GameState) -> Move | None:
     """Return the best move available.

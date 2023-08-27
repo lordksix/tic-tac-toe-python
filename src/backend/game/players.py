@@ -2,10 +2,10 @@
 
 This module allows the creation of different categories of players.
 
-Typical usage example:
+Examples:
 
-    player1 = RandomComputerPlayer(Mark("X"))
-    player2 = MinimaxComputerPlayer(Mark("O"))
+    >>> player1 = RandomComputerPlayer(Mark("X"))
+    >>> player2 = MinimaxComputerPlayer(Mark("O"))
 
 The module contains the following class:
 - `Player` - ABC
@@ -16,9 +16,9 @@ The module contains the following class:
 import abc
 import time
 
-from tic_tac_toe.logic.exceptions import InvalidMove
-from tic_tac_toe.logic.minimax import find_best_move
-from tic_tac_toe.logic.models import GameState, Mark, Move
+from backend.logic.exceptions import InvalidMove
+from backend.logic.minimax import find_best_move
+from backend.logic.models import GameState, Mark, Move
 
 class Player(metaclass=abc.ABCMeta):
     """Abstract class for the creation of players. Extends as metaclass, abc.ABCMeta.

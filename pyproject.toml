@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tic-tac-toe"
+version = "1.0.0"
+description = "Tic tac toe game"
+readme = "README.md"
+authors = [{ name = "lordksix", email = "wladimir.pasquel@urp.edu.pe" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: GNU GENERAL PUBLIC LICENSE version 3",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["game", "tictactoe", "minimax"]
+
+
+requires-python = ">=3.11"
+
+    [project.scripts]
+    tictactoe = "frontend.__main__:main"
+
+    [project.urls]
+    repository = "https://github.com/lordksix/tic-tac-toe-python"
+    documentation = "https://lordksix.github.io/tic-tac-toe-python/"
